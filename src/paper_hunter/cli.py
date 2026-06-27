@@ -12,12 +12,22 @@ from .scorer import compute_score, assign_label
 from .storage import upsert_paper, get_all_records, get_stats, get_existing_ids
 from .notify import send_notification
 from .templates import TEMPLATES
+from .sources_config import SourcesConfig, BuiltinSourceConfig, CustomSourceConfig
 
 
 def run_daily(profile_path: str | Path) -> None:
     """每日搜集流程"""
     config = load_profile(profile_path)
     base = Path(profile_path).parent.parent
+
+    # 加载数据源配置
+    sources_path = base / "sources.json"
+    if sources_path.exists():
+        with sources_path.open("r", encoding="utf-8") as f:
+            sources_raw = json.load(f)
+        sources_config = _parse_sources_config(sources_raw)
+    else:
+        sources_config = SourcesConfig()
     output_dir = base / config.output_dir
     index_path = output_dir / "index.jsonl"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -29,7 +39,7 @@ def run_daily(profile_path: str | Path) -> None:
     # 1. 收集候选
     print("\n[1/4] Collect candidates...")
     try:
-        candidates = collect_candidates(config)
+        candidates = collect_candidates(config, sources_config)
     except Exception as e:
         print(f"  [ERROR] 搜索失败: {e}")
         send_notification(
@@ -205,8 +215,20 @@ def run_init() -> None:
         years_to = 2027
     print(f"\n✅ 年份范围：{years_from}-{years_to}")
 
-    # Step 6: 搜索时间
-    print("\n第 6 步：每天搜索时间\n")
+    # Step 6: 数据源
+    print("\n第 6 步：搜索数据源\n")
+    print("  1) arXiv（推荐，速度快）")
+    print("  2) Semantic Scholar（引用数据更全）")
+    print("  3) 两者都用（覆盖更广，但更慢）")
+    source_choice = input("\n请选择 [1-3] (默认 1): ").strip() or "1"
+    source_map = {"1": ["arxiv"], "2": ["semantic_scholar"], "3": ["arxiv", "semantic_scholar"]}
+    source_labels = {"1": "arXiv", "2": "Semantic Scholar", "3": "arXiv + Semantic Scholar"}
+    sources = source_map.get(source_choice, ["arxiv"])
+    source_label = source_labels.get(source_choice, "arXiv")
+    print(f"\n✅ 数据源：{source_label}")
+
+    # Step 7: 搜索时间
+    print("\n第 7 步：每天搜索时间\n")
     print("  1) 早上 8:00")
     print("  2) 中午 12:00")
     print("  3) 晚上 20:00")
@@ -278,6 +300,12 @@ def run_init() -> None:
         },
     }
 
+    # 保存数据源配置
+    sources_path = Path("sources.json")
+    with sources_path.open("w", encoding="utf-8") as f:
+        json.dump(sources_config, f, ensure_ascii=False, indent=2)
+    print(f"\n✅ 数据源配置已保存: {sources_path}")
+
     # 保存配置
     profiles_dir = Path("profiles")
     profiles_dir.mkdir(exist_ok=True)
@@ -291,7 +319,7 @@ def run_init() -> None:
     print(f"✅ 配置已生成: {profile_path}")
 
     print(f"\n📋 下一步：")
-    print(f"   1. git add {profile_path}")
+    print(f"   1. git add {profile_path} sources.json")
     print(f'   2. git commit -m "add {profile_name} profile"')
     print(f"   3. git push")
     print(f"   4. GitHub Actions 将每天自动运行")
@@ -302,6 +330,34 @@ def run_init() -> None:
 
     print(f"\n⏰ 搜索时间：{time_label}")
     print(f"\n🎯 完成！")
+
+
+def _parse_sources_config(raw: dict) -> SourcesConfig:
+    """解析数据源配置"""
+    builtin_raw = raw.get("builtin", {})
+    builtin = {}
+    for name, cfg in builtin_raw.items():
+        builtin[name] = BuiltinSourceConfig(
+            enabled=cfg.get("enabled", True),
+            max_results=cfg.get("max_results", 30),
+        )
+
+    custom_raw = raw.get("custom", [])
+    custom = []
+    for cfg in custom_raw:
+        custom.append(CustomSourceConfig(
+            name=cfg.get("name", ""),
+            enabled=cfg.get("enabled", True),
+            api_url=cfg.get("api_url", ""),
+            query_param=cfg.get("query_param", "q"),
+            format=cfg.get("format", "json"),
+            title_field=cfg.get("title_field", "title"),
+            abstract_field=cfg.get("abstract_field", "abstract"),
+            max_results=cfg.get("max_results", 20),
+            headers=cfg.get("headers", {}),
+        ))
+
+    return SourcesConfig(builtin=builtin, custom=custom)
 
 
 def main() -> None:

@@ -8,6 +8,9 @@ from urllib.request import urlopen, Request
 from urllib.parse import urlencode
 
 from .config import ProfileConfig
+from .sources_config import SourcesConfig, BuiltinSourceConfig, CustomSourceConfig
+from .sources.openalex import search_openalex
+from .sources.custom_source import search_custom_source
 
 try:
     import arxiv
@@ -156,16 +159,53 @@ def _dedup(new_papers: list[dict], seen_ids: set[str]) -> list[dict]:
     return unique
 
 
-def collect_candidates(config: ProfileConfig) -> list[tuple[str, str, dict]]:
+def _search_builtin_source(query: str, source_name: str, max_results: int) -> list[dict]:
+    """搜索内置数据源"""
+    if source_name == "arxiv":
+        return _search_one_query(query, max_results)
+    elif source_name == "semantic_scholar":
+        from .sources.semantic_scholar import search_semantic_scholar
+        return search_semantic_scholar(query, max_results)
+    elif source_name == "openalex":
+        return search_openalex(query, max_results)
+    else:
+        return []
+
+
+def collect_candidates(
+    config: ProfileConfig,
+    sources_config: SourcesConfig | None = None,
+) -> list[tuple[str, str, dict]]:
     """收集所有候选论文
+
+    Args:
+        config: Profile 配置
+        sources_config: 数据源配置（可选）
 
     Returns:
         [(query_type, search_query, raw_paper), ...]
     """
-    max_results = config.runtime.max_results_per_query
     blocked = config.filters.blocked_keywords
     seen_ids: set[str] = set()
     candidates: list[tuple[str, str, dict]] = []
+
+    # 确定启用的数据源
+    if sources_config is None:
+        sources_config = SourcesConfig()
+
+    enabled_sources = []
+    for name, src_cfg in sources_config.builtin.items():
+        if src_cfg.enabled:
+            enabled_sources.append((name, src_cfg.max_results))
+    has_custom = bool(sources_config.custom)
+
+    if not enabled_sources and not has_custom:
+        print("  [WARN] 未启用任何数据源，使用默认 arXiv")
+        enabled_sources = [("arxiv", 30)]
+
+    print(f"  启用数据源: {[s[0] for s in enabled_sources]}")
+    if sources_config.custom:
+        print(f"  自定义数据源: {[c.name for c in sources_config.custom]}")
 
     query_groups = [
         ("core", config.core_queries),
@@ -175,17 +215,33 @@ def collect_candidates(config: ProfileConfig) -> list[tuple[str, str, dict]]:
 
     for query_type, queries in query_groups:
         for query in queries:
-            print(f"  [{query_type}] {query[:50]}...")
-            raw_papers = _search_one_query(query, max_results)
-            new_papers = _dedup(raw_papers, seen_ids)
+            print(f"\n  [{query_type}] {query[:50]}...")
+
+            # 搜索所有启用的内置数据源
+            all_papers = []
+            for source_name, max_results in enabled_sources:
+                print(f"    搜索 {source_name}...")
+                raw_papers = _search_builtin_source(query, source_name, max_results)
+                all_papers.extend(raw_papers)
+                if source_name == "arxiv":
+                    time.sleep(3)  # arXiv rate limit
+
+            # 搜索自定义数据源
+            for custom_src in sources_config.custom:
+                if custom_src.enabled:
+                    print(f"    搜索 {custom_src.name}...")
+                    raw_papers = search_custom_source(query, custom_src)
+                    all_papers.extend(raw_papers)
+
+            # 去重和过滤
+            new_papers = _dedup(all_papers, seen_ids)
             kept = 0
             for paper in new_papers:
                 if _pre_filter(paper, blocked):
                     continue
                 candidates.append((query_type, query, paper))
                 kept += 1
-            print(f"    新论文: {len(new_papers)}, 通过预过滤: {kept}")
-            time.sleep(3)  # arXiv rate limit
+            print(f"    合并去重后: {len(new_papers)}, 通过预过滤: {kept}")
 
     print(f"\n候选池总计: {len(candidates)} 篇")
     return candidates
