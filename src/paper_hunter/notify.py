@@ -199,3 +199,89 @@ def send_email_notification(
     except Exception as e:
         print(f"  [WARN] 邮件发送失败: {e}")
         return False
+
+
+def _build_telegram_message(
+    profile_name: str,
+    new_papers: list[dict],
+    stats: dict,
+) -> str:
+    """构建 Telegram 消息文本"""
+    total = stats.get("total", 0)
+    by_label = stats.get("by_label", {})
+    core_count = by_label.get("core", 0)
+
+    if not new_papers:
+        return f"📋 {profile_name} — 今日无新增论文\n总论文数: {total} | 核心: {core_count}"
+
+    lines = [f"📚 {profile_name} — 新增 {len(new_papers)} 篇论文"]
+    lines.append(f"总论文数: {total} | 核心: {core_count}")
+    lines.append("")
+
+    for p in new_papers[:10]:
+        label = {"core": "🔥", "strongly_related": "📎"}.get(p.get("quality_label", ""), "📝")
+        title = p.get("title", "")[:50]
+        url = p.get("url", "")
+        score = p.get("relevance_score", 0)
+        cit = p.get("citation_count", 0)
+        summary = p.get("summary_zh", "")[:40]
+
+        line = f"{label} {title}\n  Score: {score} | Citations: {cit}"
+        if url:
+            line += f"\n  {url}"
+        if summary:
+            line += f"\n  📝 {summary}"
+        lines.append(line)
+        lines.append("")
+
+    if len(new_papers) > 10:
+        lines.append(f"... 还有 {len(new_papers) - 10} 篇")
+
+    return "\n".join(lines)
+
+
+def send_telegram_notification(
+    profile_name: str,
+    new_papers: list[dict],
+    stats: dict,
+    bot_token: str = "",
+    chat_id: str = "",
+) -> bool:
+    """发送 Telegram 通知
+
+    Args:
+        profile_name: 配置名称
+        new_papers: 新增论文列表
+        stats: 统计信息
+        bot_token: Telegram Bot Token
+        chat_id: Telegram Chat ID
+
+    Returns:
+        是否发送成功
+    """
+    if not bot_token or not chat_id:
+        print("  [INFO] Telegram 配置不完整，跳过通知")
+        return False
+
+    message = _build_telegram_message(profile_name, new_papers, stats)
+
+    try:
+        import json as _json
+        url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+        payload = _json.dumps({
+            "chat_id": chat_id,
+            "text": message,
+            "disable_web_page_preview": True,
+        }).encode("utf-8")
+
+        req = Request(url, data=payload, headers={"Content-Type": "application/json"})
+        with urlopen(req, timeout=10) as resp:
+            result = _json.loads(resp.read().decode("utf-8"))
+            if result.get("ok"):
+                print(f"  ✅ Telegram 通知已发送")
+                return True
+            print(f"  [WARN] Telegram 返回: {result}")
+            return False
+    except Exception as e:
+        print(f"  [WARN] Telegram 通知失败: {e}")
+        return False

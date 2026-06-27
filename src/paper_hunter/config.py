@@ -43,8 +43,10 @@ class RuntimeConfig:
 
 @dataclass
 class NotificationConfig:
-    type: str = "none"  # none / feishu / discord / slack
-    webhook_env: str = ""  # 环境变量名
+    type: str = "none"  # none / feishu / telegram / email
+    webhook_env: str = ""  # 飞书 webhook 环境变量名
+    telegram_token_env: str = ""  # Telegram Bot Token 环境变量名
+    telegram_chat_env: str = ""  # Telegram Chat ID 环境变量名
 
 
 @dataclass

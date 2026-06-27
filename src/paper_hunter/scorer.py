@@ -1,5 +1,7 @@
 """通用论文相关性评分模块"""
 from __future__ import annotations
+import math
+from datetime import datetime
 from .config import ScoringConfig
 
 
@@ -135,3 +137,106 @@ def assign_label(
     if score >= min_score:
         return "strongly_related"
     return "noise"
+
+
+def compute_novelty_score(year: int, current_year: int | None = None) -> float:
+    """计算新颖性分数 (0.0 - 1.0)
+
+    当前年份 = 1.0，每老一年衰减 20%，最低 0.0
+    """
+    if current_year is None:
+        current_year = datetime.now().year
+    age = max(0, current_year - year)
+    if age == 0:
+        return 1.0
+    if age == 1:
+        return 0.8
+    # 指数衰减
+    score = max(0.0, 1.0 - age * 0.15)
+    return round(score, 2)
+
+
+def compute_impact_score(citation_count: int) -> float:
+    """计算影响力分数 (0.0 - 1.0)
+
+    使用对数归一化：log10(citations + 1) / log10(10000)
+    10000 引用 => 1.0，100 引用 => 0.5，10 引用 => 0.25
+    """
+    if citation_count <= 0:
+        return 0.0
+    score = math.log10(citation_count + 1) / math.log10(10001)
+    return round(min(1.0, score), 2)
+
+
+def compute_hotness_score(
+    citation_count: int,
+    citations_recent: list[int] | None = None,
+) -> float:
+    """计算热度分数 (0.0 - 1.0)
+
+    如果有近期引用数据 (最近几个月的引用数)，用近期引用 / 总引用的比率。
+    如果没有近期数据，用总引用的对数作为热度估算。
+    """
+    if citations_recent and len(citations_recent) > 0:
+        recent_total = sum(citations_recent)
+        if citation_count > 0:
+            # 近期引用占比，越高越热
+            ratio = recent_total / max(citation_count, 1)
+            # 加上近期引用的绝对量
+            recent_avg = recent_total / len(citations_recent)
+            score = min(1.0, ratio * 0.5 + math.log10(recent_avg + 1) / 3.0)
+            return round(score, 2)
+    # 无近期数据，用总引用估算
+    if citation_count <= 0:
+        return 0.0
+    score = math.log10(citation_count + 1) / 5.0
+    return round(min(1.0, score), 2)
+
+
+def compute_multi_dimension_score(
+    paper: dict,
+    relevance: float,
+    current_year: int | None = None,
+    weights: dict[str, float] | None = None,
+) -> dict[str, float]:
+    """计算多维度综合评分
+
+    Args:
+        paper: 论文记录
+        relevance: 相关性分数（已计算好的）
+        current_year: 当前年份
+        weights: 各维度权重，默认 relevance:0.4, novelty:0.2, impact:0.25, hotness:0.15
+
+    Returns:
+        {"relevance": float, "novelty": float, "impact": float, "hotness": float, "composite": float}
+    """
+    if weights is None:
+        weights = {"relevance": 0.4, "novelty": 0.2, "impact": 0.25, "hotness": 0.15}
+
+    year = paper.get("year", 2020)
+    citation_count = paper.get("citation_count", 0)
+    citations_recent = paper.get("citations_recent", [])
+
+    novelty = compute_novelty_score(year, current_year)
+    impact = compute_impact_score(citation_count)
+    hotness = compute_hotness_score(citation_count, citations_recent)
+
+    # 归一化 relevance 到 0-1 范围（假设最大 10 分）
+    relevance_norm = min(1.0, max(0.0, relevance / 10.0))
+
+    composite = (
+        weights["relevance"] * relevance_norm
+        + weights["novelty"] * novelty
+        + weights["impact"] * impact
+        + weights["hotness"] * hotness
+    )
+    # 还原到 relevance 的量级（乘以 10）
+    composite_score = round(composite * 10.0, 2)
+
+    return {
+        "relevance": round(relevance, 2),
+        "novelty": novelty,
+        "impact": impact,
+        "hotness": hotness,
+        "composite": composite_score,
+    }

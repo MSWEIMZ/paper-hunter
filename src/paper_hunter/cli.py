@@ -1,6 +1,7 @@
 """Paper Hunter — 通用论文搜集 CLI 入口"""
 from __future__ import annotations
 import sys
+import os
 import json
 from pathlib import Path
 from datetime import datetime
@@ -19,6 +20,9 @@ from .trends import generate_trends_markdown
 from .readme import generate_readme
 from .dashboard import generate_dashboard_html
 from .citation_filler import fill_citations
+from .scorer import compute_multi_dimension_score
+from .topk import select_top_k, format_top_k_markdown
+from .notify import send_telegram_notification
 
 
 def run_daily(profile_path: str | Path) -> None:
@@ -148,11 +152,30 @@ def run_daily(profile_path: str | Path) -> None:
     stats = get_stats(index_path)
     stats["noise_blocked_today"] = noise_blocked
 
+    # Top K 推荐
+    top_k = config.scoring.top_k if hasattr(config.scoring, "top_k") else 5
+    top_papers = select_top_k(new_papers, k=top_k)
+    if top_papers:
+        topk_md = format_top_k_markdown(top_papers)
+        (output_dir / "TOP_K.md").write_text(topk_md, encoding="utf-8")
+        print(f"  Top {top_k} 推荐已生成")
+
+    # 通知
     if config.notification.type == "feishu":
         send_notification(
             config.profile_name, new_records, stats,
             config.notification.webhook_env,
         )
+
+    # Telegram 通知
+    if config.notification.type == "telegram":
+        tg_token = os.environ.get(config.notification.telegram_token_env, "")
+        tg_chat = os.environ.get(config.notification.telegram_chat_env, "")
+        if tg_token and tg_chat:
+            send_telegram_notification(
+                config.profile_name, new_records, stats,
+                tg_token, tg_chat,
+            )
 
     print(f"\n[DONE] added={added} updated={updated} noise_blocked={noise_blocked}")
     print(f"  输出目录: {output_dir}")
@@ -231,14 +254,54 @@ def run_init() -> None:
         user_input = input("> ").strip()
         expanded_queries = [q.strip() for q in user_input.split(",") if q.strip()] if user_input else []
 
-    # Step 4: 飞书 Webhook
-    print("\n第 4 步：飞书通知（可选）\n")
-    webhook_url = input("请输入飞书 Webhook URL（直接回车跳过）:\n> ").strip()
+    # Step 4: 通知方式
+    print("\n第 4 步：通知方式（可选）\n")
+    print("  1) 飞书")
+    print("  2) Telegram")
+    print("  3) 邮件")
+    print("  4) 跳过")
+    notif_choice = input("\n请选择 [1-4] (默认 4): ").strip() or "4")
+
     webhook_env = ""
-    if webhook_url:
-        webhook_env = "FEISHU_WEBHOOK"
-        print("\n✅ 已配置飞书通知")
-        print(f"   请设置环境变量：export FEISHU_WEBHOOK=\"{webhook_url}\"")
+    tg_token_env = ""
+    tg_chat_env = ""
+    email_config = {}
+    notif_type = "none"
+
+    if notif_choice == "1":
+        webhook_url = input("飞书 Webhook URL:\n> ").strip()
+        if webhook_url:
+            webhook_env = "FEISHU_WEBHOOK"
+            notif_type = "feishu"
+            print("\n✅ 已配置飞书通知")
+            print(f"   请设置环境变量：export FEISHU_WEBHOOK=\"{webhook_url}\"")
+    elif notif_choice == "2":
+        bot_token = input("Telegram Bot Token:\n> ").strip()
+        chat_id = input("Telegram Chat ID:\n> ").strip()
+        if bot_token and chat_id:
+            tg_token_env = "TG_BOT_TOKEN"
+            tg_chat_env = "TG_CHAT_ID"
+            notif_type = "telegram"
+            print("\n✅ 已配置 Telegram 通知")
+            print(f"   请设置环境变量：")
+            print(f"   export TG_BOT_TOKEN=\"{bot_token}\"")
+            print(f"   export TG_CHAT_ID=\"{chat_id}\"")
+    elif notif_choice == "3":
+        smtp_host = input("SMTP 服务器 [smtp.gmail.com]: ").strip() or "smtp.gmail.com"
+        smtp_port = input("SMTP 端口 [587]: ").strip() or "587"
+        smtp_user = input("发件人邮箱:\n> ").strip()
+        to_email = input("收件人邮箱:\n> ").strip()
+        if smtp_user and to_email:
+            email_config = {
+                "smtp_host": smtp_host,
+                "smtp_port": int(smtp_port),
+                "smtp_user": smtp_user,
+                "to_email": to_email,
+            }
+            notif_type = "email"
+            print("\n✅ 已配置邮件通知")
+    else:
+        print("\n✅ 跳过通知配置")
 
     # Step 5: 年份范围
     print("\n第 5 步：年份范围\n")
@@ -324,8 +387,10 @@ def run_init() -> None:
             "strongly_related_threshold": 2.5,
         },
         "notification": {
-            "type": "feishu" if webhook_env else "none",
+            "type": notif_type,
             "webhook_env": webhook_env,
+            "telegram_token_env": tg_token_env,
+            "telegram_chat_env": tg_chat_env,
         },
         "runtime": {
             "max_results_per_query": 30,
