@@ -1,0 +1,62 @@
+{
+  "profile_name": "Video CNN/XAI Research Hub",
+  "description": "视频深度学习与可解释性论文自动搜集",
+  "output_dir": "output/video_cnn_xai",
+  "queries": {
+    "core": [
+      "R(2+1)D video classification interpretability",
+      "3D CNN video explainability",
+      "spatiotemporal convolution video understanding",
+      "video action recognition neural network",
+      "Decomposed 3D convolutions action recognition",
+      "video CNN saliency visualization",
+      "3D convolutional neural network temporal reasoning"
+    ],
+    "expanded": [
+      "Grad-CAM video action recognition",
+      "SHAP LIME video deep learning",
+      "attention rollout video transformer",
+      "video saliency prediction deep learning",
+      "network dissection visual representations",
+      "video transformer interpretability",
+      "spatiotemporal attention mechanism",
+      "video feature visualization",
+      "SlowFast TimeSformer VideoMAE explainability",
+      "video action recognition benchmark"
+    ],
+    "exploratory": [
+      "explainable AI video understanding",
+      "video representation learning interpretability",
+      "perturbation-based explanation video",
+      "concept bottleneck video model",
+      "visual reasoning video neural network",
+      "video understanding foundation model",
+      "video temporal grounding explanation"
+    ]
+  },
+  "domain_keywords": [
+    "video", "3D CNN", "spatiotemporal", "action recognition",
+    "temporal", "R(2+1)D", "SlowFast", "TimeSformer", "VideoMAE",
+    "Grad-CAM", "saliency", "interpretability", "explainability", "XAI"
+  ],
+  "filters": {
+    "years_from": 2015,
+    "years_to": 2027,
+    "allowed_categories": ["cs.CV", "cs.LG", "cs.AI"],
+    "blocked_keywords": ["reinforcement learning survey", "cooking recipe"]
+  },
+  "scoring": {
+    "min_relevance_score": 2.5,
+    "core_threshold": 4.0,
+    "strongly_related_threshold": 2.5
+  },
+  "notification": {
+    "type": "feishu",
+    "webhook_env": "FEISHU_WEBHOOK"
+  },
+  "runtime": {
+    "max_results_per_query": 30,
+    "write_markdown_cards": true,
+    "write_readme": true
+  }
+}
