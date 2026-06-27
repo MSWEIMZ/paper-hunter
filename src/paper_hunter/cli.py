@@ -13,6 +13,12 @@ from .storage import upsert_paper, get_all_records, get_stats, get_existing_ids
 from .notify import send_notification
 from .templates import TEMPLATES
 from .sources_config import SourcesConfig, BuiltinSourceConfig, CustomSourceConfig
+from .summarizer import enhance_record
+from .topics import classify_paper_topics, generate_topics_markdown
+from .trends import generate_trends_markdown
+from .readme import generate_readme
+from .dashboard import generate_dashboard_html
+from .citation_filler import fill_citations
 
 
 def run_daily(profile_path: str | Path) -> None:
@@ -105,8 +111,39 @@ def run_daily(profile_path: str | Path) -> None:
             updated += 1
     print(f"  新增: {added}, 更新: {updated}")
 
+    # 3.5 增强记录
+    print("\n[3.5/5] Enhance records...")
+    all_records = get_all_records(index_path)
+    for rec in all_records:
+        rec = enhance_record(rec)
+        rec["topics"] = classify_paper_topics(rec)
+        upsert_paper(index_path, rec)
+
+    # 3.6 生成显示文件
+    print("\n[3.6/5] Generate display files...")
+    stats = get_stats(index_path)
+    stats["noise_blocked_today"] = noise_blocked
+
+    # README
+    readme_content = generate_readme(all_records, stats, config.profile_name, config.description)
+    (output_dir / "README.md").write_text(readme_content, encoding="utf-8")
+
+    # Topics
+    topics_content = generate_topics_markdown(all_records)
+    (output_dir / "TOPICS.md").write_text(topics_content, encoding="utf-8")
+
+    # Trends
+    trends_content = generate_trends_markdown(all_records)
+    (output_dir / "TRENDS.md").write_text(trends_content, encoding="utf-8")
+
+    # Dashboard
+    dashboard_content = generate_dashboard_html(all_records, stats, config.profile_name)
+    (output_dir / "dashboard.html").write_text(dashboard_content, encoding="utf-8")
+
+    print("  README/TOPICS/TRENDS/dashboard.html 已生成")
+
     # 4. 通知
-    print("\n[4/4] Notify...")
+    print("\n[5/5] Notify...")
     all_records = get_all_records(index_path)
     stats = get_stats(index_path)
     stats["noise_blocked_today"] = noise_blocked
@@ -118,6 +155,7 @@ def run_daily(profile_path: str | Path) -> None:
         )
 
     print(f"\n[DONE] added={added} updated={updated} noise_blocked={noise_blocked}")
+    print(f"  输出目录: {output_dir}")
 
 
 def run_init() -> None:
@@ -360,6 +398,109 @@ def _parse_sources_config(raw: dict) -> SourcesConfig:
     return SourcesConfig(builtin=builtin, custom=custom)
 
 
+def run_backfill(profile_path: str | Path) -> None:
+    """回填引用数据"""
+    config = load_profile(profile_path)
+    base = Path(profile_path).parent.parent
+    output_dir = base / config.output_dir
+    index_path = output_dir / "index.jsonl"
+
+    print("=" * 60)
+    print(f"Backfill — {config.profile_name}")
+    print("=" * 60)
+
+    if not index_path.exists():
+        print("  [ERROR] index.jsonl 不存在，请先运行 run-daily")
+        return
+
+    all_records = get_all_records(index_path)
+    print(f"  已有论文: {len(all_records)}")
+
+    enriched, updated_records = fill_citations(all_records, max_fill=200)
+
+    # 写回索引
+    for rec in updated_records:
+        upsert_paper(index_path, rec)
+
+    print(f"\n[DONE] 回填 {enriched} 篇论文的引用数据")
+
+
+def run_stats(profile_path: str | Path) -> None:
+    """查看统计信息"""
+    config = load_profile(profile_path)
+    base = Path(profile_path).parent.parent
+    output_dir = base / config.output_dir
+    index_path = output_dir / "index.jsonl"
+
+    print("=" * 60)
+    print(f"Stats — {config.profile_name}")
+    print("=" * 60)
+
+    if not index_path.exists():
+        print("  [ERROR] index.jsonl 不存在")
+        return
+
+    all_records = get_all_records(index_path)
+    stats = get_stats(index_path)
+
+    print(f"\n论文总数: {stats['total']}")
+    print(f"\n按标签:")
+    for label, count in stats.get("by_label", {}).items():
+        print(f"  {label}: {count}")
+
+    print(f"\n按年份:")
+    for year, count in sorted(stats.get("by_year", {}).items(), reverse=True)[:10]:
+        print(f"  {year}: {count}")
+
+    cit_count = sum(1 for r in all_records if r.get("citation_count", 0) > 0)
+    print(f"\n有引用数据: {cit_count}/{stats['total']}")
+
+
+def run_export(profile_path: str | Path) -> None:
+    """导出 BibTeX"""
+    config = load_profile(profile_path)
+    base = Path(profile_path).parent.parent
+    output_dir = base / config.output_dir
+    index_path = output_dir / "index.jsonl"
+
+    if not index_path.exists():
+        print("  [ERROR] index.jsonl 不存在")
+        return
+
+    all_records = get_all_records(index_path)
+    bib_path = output_dir / "papers.bib"
+
+    lines = []
+    for r in all_records:
+        if r.get("quality_label") not in ("core", "strongly_related"):
+            continue
+
+        cid = r.get("canonical_id", "unknown").replace(".", "").replace("/", "")
+        title = r.get("title", "")
+        authors = " and ".join(r.get("authors", []))
+        year = r.get("year", "")
+        url = r.get("url", "")
+        venue = r.get("venue", "")
+        abstract = r.get("abstract", "")[:200]
+
+        entry = f"@article{{{cid},\n"
+        entry += f"  title = {{{title}}},\n"
+        entry += f"  author = {{{authors}}},\n"
+        entry += f"  year = {{{year}}},\n"
+        if venue:
+            entry += f"  journal = {{{venue}}},\n"
+        if url:
+            entry += f"  url = {{{url}}},\n"
+        if abstract:
+            entry += f"  abstract = {{{abstract}}},\n"
+        entry += "}\n"
+        lines.append(entry)
+
+    bib_path.write_text("\n".join(lines), encoding="utf-8")
+    print(f"✅ BibTeX 已导出: {bib_path}")
+    print(f"  共 {len(lines)} 条记录")
+
+
 def main() -> None:
     if len(sys.argv) < 2:
         print("Usage: python -m paper_hunter.cli <command> [args]")
@@ -377,8 +518,30 @@ def main() -> None:
             print("Usage: python -m paper_hunter.cli run-daily <profile.json>")
             sys.exit(1)
         run_daily(sys.argv[2])
+    elif command == "run-backfill":
+        if len(sys.argv) < 3:
+            print("Usage: python -m paper_hunter.cli run-backfill <profile.json>")
+            sys.exit(1)
+        run_backfill(sys.argv[2])
+    elif command == "run-stats":
+        if len(sys.argv) < 3:
+            print("Usage: python -m paper_hunter.cli run-stats <profile.json>")
+            sys.exit(1)
+        run_stats(sys.argv[2])
+    elif command == "run-export":
+        if len(sys.argv) < 3:
+            print("Usage: python -m paper_hunter.cli run-export <profile.json>")
+            sys.exit(1)
+        run_export(sys.argv[2])
     else:
         print(f"Unknown command: {command}")
+        print()
+        print("Available commands:")
+        print("  init              交互式初始化向导")
+        print("  run-daily <profile>  运行每日搜集")
+        print("  run-backfill <profile>  回填引用数据")
+        print("  run-stats <profile>  查看统计信息")
+        print("  run-export <profile>  导出 BibTeX")
         sys.exit(1)
 
 
