@@ -260,7 +260,7 @@ def run_init() -> None:
     print("  2) Telegram")
     print("  3) 邮件")
     print("  4) 跳过")
-    notif_choice = input("\n请选择 [1-4] (默认 4): ").strip() or "4")
+    notif_choice = input("\n请选择 [1-4] (默认 4): ").strip() or "4"
 
     webhook_env = ""
     tg_token_env = ""
@@ -571,8 +571,11 @@ def main() -> None:
         print("Usage: python -m paper_hunter.cli <command> [args]")
         print()
         print("Commands:")
-        print("  init              交互式初始化向导")
+        print("  init                 交互式初始化向导")
         print("  run-daily <profile>  运行每日搜集")
+        print("  run-backfill <profile>  回填引用数据")
+        print("  run-stats <profile>  查看统计信息")
+        print("  run-export <profile>  导出 BibTeX")
         sys.exit(1)
 
     command = sys.argv[1]
