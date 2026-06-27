@@ -2,7 +2,8 @@ name: Daily Paper Search
 
 on:
   schedule:
-    # 每天北京时间早上 8 点运行 (UTC 0:00)
+    # 默认每天北京时间早上 8 点 (UTC 0:00)
+    # 用户可以在 profiles/xxx.json 的 schedule.cron 中自定义
     - cron: '0 0 * * *'
   workflow_dispatch:  # 允许手动触发
 

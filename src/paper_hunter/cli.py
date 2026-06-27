@@ -205,6 +205,33 @@ def run_init() -> None:
         years_to = 2027
     print(f"\n✅ 年份范围：{years_from}-{years_to}")
 
+    # Step 6: 搜索时间
+    print("\n第 6 步：每天搜索时间\n")
+    print("  1) 早上 8:00")
+    print("  2) 中午 12:00")
+    print("  3) 晚上 20:00")
+    print("  4) 自定义")
+    time_choice = input("\n请选择 [1-4] (默认 1): ").strip() or "1"
+    time_map = {"1": "0 0 * * *", "2": "0 4 * * *", "3": "0 12 * * *"}
+    if time_choice in time_map:
+        cron_schedule = time_map[time_choice]
+        time_labels = {"1": "早上 8:00 (北京时间)", "2": "中午 12:00 (北京时间)", "3": "晚上 20:00 (北京时间)"}
+        time_label = time_labels[time_choice]
+    else:
+        hour = input("  小时 (0-23): ").strip()
+        minute = input("  分钟 (0-59): ").strip() or "0"
+        try:
+            hour = int(hour)
+            minute = int(minute)
+            # 北京时间转 UTC (减 8 小时)
+            utc_hour = (hour - 8) % 24
+            cron_schedule = f"{minute} {utc_hour} * * *"
+            time_label = f"{hour}:{minute:02d} (北京时间)"
+        except ValueError:
+            cron_schedule = "0 0 * * *"
+            time_label = "早上 8:00 (北京时间)"
+    print(f"\n✅ 搜索时间：{time_label}")
+
     # 生成配置
     if template_data:
         domain_keywords = template_data["domain_keywords"]
@@ -245,6 +272,10 @@ def run_init() -> None:
             "write_markdown_cards": True,
             "write_readme": True,
         },
+        "schedule": {
+            "cron": cron_schedule,
+            "description": time_label,
+        },
     }
 
     # 保存配置
@@ -269,6 +300,7 @@ def run_init() -> None:
         print(f"\n🔔 飞书通知：")
         print(f'   export FEISHU_WEBHOOK="{webhook_url}"')
 
+    print(f"\n⏰ 搜索时间：{time_label}")
     print(f"\n🎯 完成！")
 
 

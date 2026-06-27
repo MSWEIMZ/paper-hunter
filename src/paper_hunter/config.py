@@ -48,6 +48,12 @@ class NotificationConfig:
 
 
 @dataclass
+class ScheduleConfig:
+    cron: str = "0 0 * * *"
+    description: str = "早上 8:00 (北京时间)"
+
+
+@dataclass
 class ProfileConfig:
     profile_name: str = ""
     description: str = ""
@@ -60,6 +66,7 @@ class ProfileConfig:
     scoring: ScoringConfig = field(default_factory=ScoringConfig)
     runtime: RuntimeConfig = field(default_factory=RuntimeConfig)
     notification: NotificationConfig = field(default_factory=NotificationConfig)
+    schedule: ScheduleConfig = field(default_factory=ScheduleConfig)
 
     def to_dict(self) -> dict:
         """序列化为 dict"""
@@ -139,6 +146,13 @@ def load_profile(path: str | Path) -> ProfileConfig:
         webhook_env=n_raw.get("webhook_env", ""),
     )
 
+    # Schedule
+    sched_raw = raw.get("schedule", {})
+    schedule = ScheduleConfig(
+        cron=sched_raw.get("cron", "0 0 * * *"),
+        description=sched_raw.get("description", ""),
+    )
+
     return ProfileConfig(
         profile_name=raw["profile_name"],
         description=raw.get("description", ""),
@@ -151,4 +165,5 @@ def load_profile(path: str | Path) -> ProfileConfig:
         scoring=scoring,
         runtime=runtime,
         notification=notification,
+        schedule=schedule,
     )
