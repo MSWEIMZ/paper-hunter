@@ -10,78 +10,64 @@
 pip install -r requirements.txt
 ```
 
-### 2. 创建 Profile
-
-在 `profiles/` 目录下创建 JSON 配置文件：
-
-```json
-{
-  "profile_name": "My Research Domain",
-  "description": "我的研究领域论文自动搜集",
-  "output_dir": "output/my_domain",
-  "queries": {
-    "core": ["关键词1", "关键词2"],
-    "expanded": ["扩展关键词1"],
-    "exploratory": ["探索性关键词1"]
-  },
-  "domain_keywords": ["领域词1", "领域词2"],
-  "filters": {
-    "years_from": 2020,
-    "years_to": 2027,
-    "allowed_categories": ["cs.CV", "cs.AI"],
-    "blocked_keywords": ["无关词1"]
-  },
-  "scoring": {
-    "min_relevance_score": 2.5,
-    "core_threshold": 4.0
-  },
-  "notification": {
-    "type": "feishu",
-    "webhook_env": "MY_WEBHOOK_ENV"
-  }
-}
-```
-
-### 3. 运行
+### 2. 初始化配置
 
 ```bash
-# 每日搜集
-python -m paper_hunter.cli run-daily profiles/my_domain.json
+python -m paper_hunter.cli init
 ```
 
-## 📊 Profile 配置说明
+向导会引导你完成配置：
+1. 选择研究领域（8 个预设模板或自定义）
+2. 确认/修改关键词
+3. 配置飞书通知（可选）
+4. 设置年份范围
 
-| 字段 | 说明 | 必填 |
-|------|------|------|
-| `profile_name` | 配置名称 | ✅ |
-| `description` | 描述 | ❌ |
-| `output_dir` | 输出目录（相对于项目根目录） | ❌ (默认 `papers`) |
-| `queries.core` | 核心查询词 | ✅ |
-| `queries.expanded` | 扩展查询词 | ❌ |
-| `queries.exploratory` | 探索性查询词 | ❌ |
-| `domain_keywords` | 领域关键词（命中加分） | ❌ |
-| `filters.years_from` | 起始年份 | ❌ (默认 2015) |
-| `filters.years_to` | 结束年份 | ❌ (默认 2027) |
-| `filters.allowed_categories` | 允许的 arXiv 类别 | ❌ |
-| `filters.blocked_keywords` | 屏蔽关键词（命中扣分） | ❌ |
-| `scoring.min_relevance_score` | 最低相关性分数 | ❌ (默认 2.5) |
-| `scoring.core_threshold` | Core 论文阈值 | ❌ (默认 4.0) |
-| `notification.type` | 通知类型 (feishu/none) | ❌ |
-| `notification.webhook_env` | Webhook 环境变量名 | ❌ |
+完成后自动生成 `profiles/xxx.json`。
+
+### 3. 推送到 GitHub
+
+```bash
+git add profiles/xxx.json
+git commit -m "add my profile"
+git push
+```
+
+GitHub Actions 将每天自动运行，论文推送到飞书。
+
+## 📋 预设模板
+
+| 模板 | 说明 |
+|------|------|
+| `video` | 视频理解与分析 |
+| `vision` | 计算机视觉 |
+| `nlp` | 自然语言处理 |
+| `llm` | 大语言模型 |
+| `medical` | 医学影像 |
+| `robotics` | 机器人学习 |
+| `diffusion` | 扩散模型 |
+| `xai` | 可解释 AI |
 
 ## 🔔 飞书通知
 
-设置环境变量：
+向导会提示你输入飞书 Webhook URL。
 
+如果跳过，可以手动设置环境变量：
 ```bash
 export FEISHU_WEBHOOK="https://open.feishu.cn/open-apis/bot/v2/hook/xxx"
+```
+
+## 📊 手动运行
+
+```bash
+# 每日搜集
+python -m paper_hunter.cli run-daily profiles/video.json
 ```
 
 ## 📁 输出结构
 
 ```
 output/
-└── my_domain/
+└── video/
     └── index.jsonl          # 论文索引（JSONL 格式）
 ```
 
