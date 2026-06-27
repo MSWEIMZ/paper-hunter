@@ -1,15 +1,17 @@
 """Paper Hunter — 通用论文搜集 CLI 入口"""
 from __future__ import annotations
 import sys
+import json
 from pathlib import Path
 from datetime import datetime
 
-from .config import load_profile
+from .config import load_profile, ProfileConfig, FilterConfig, ScoringConfig, RuntimeConfig, NotificationConfig
 from .collector import collect_candidates
 from .normalizer import build_paper_record, extract_year
 from .scorer import compute_score, assign_label
 from .storage import upsert_paper, get_all_records, get_stats, get_existing_ids
 from .notify import send_notification
+from .templates import TEMPLATES
 
 
 def run_daily(profile_path: str | Path) -> None:
@@ -108,14 +110,184 @@ def run_daily(profile_path: str | Path) -> None:
     print(f"\n[DONE] added={added} updated={updated} noise_blocked={noise_blocked}")
 
 
+def run_init() -> None:
+    """交互式初始化向导"""
+    print("\n🎯 Paper Hunter 初始化向导")
+    print("=" * 40)
+
+    # Step 1: 选择模板
+    print("\n第 1 步：选择研究领域\n")
+    template_keys = list(TEMPLATES.keys())
+    for i, key in enumerate(template_keys, 1):
+        tmpl = TEMPLATES[key]
+        print(f"  {i}) {tmpl['name']}")
+    print(f"  {len(template_keys) + 1}) 自定义")
+
+    choice = input(f"\n请选择 [1-{len(template_keys) + 1}]: ").strip()
+
+    if choice == str(len(template_keys) + 1):
+        # 自定义
+        profile_name = input("\n研究领域名称: ").strip()
+        if not profile_name:
+            print("❌ 名称不能为空")
+            return
+        template_data = None
+    else:
+        try:
+            idx = int(choice) - 1
+            if idx < 0 or idx >= len(template_keys):
+                raise ValueError
+            template_key = template_keys[idx]
+            template_data = TEMPLATES[template_key]
+            profile_name = template_data["name"]
+            print(f"\n✅ 已选择：{profile_name}")
+        except (ValueError, IndexError):
+            print("❌ 无效选择")
+            return
+
+    # Step 2: 核心关键词
+    print("\n第 2 步：核心关键词（可修改，直接回车使用默认）\n")
+    if template_data:
+        default_queries = template_data["core_queries"]
+        print("默认关键词：")
+        for q in default_queries:
+            print(f"  - {q}")
+        user_input = input("\n直接回车使用默认，或输入自定义关键词（逗号分隔）:\n> ").strip()
+        if user_input:
+            core_queries = [q.strip() for q in user_input.split(",") if q.strip()]
+        else:
+            core_queries = default_queries
+            print("\n✅ 使用默认关键词")
+    else:
+        print("请输入核心关键词（逗号分隔）:")
+        user_input = input("> ").strip()
+        core_queries = [q.strip() for q in user_input.split(",") if q.strip()]
+        if not core_queries:
+            print("❌ 至少需要一个关键词")
+            return
+
+    # Step 3: 扩展关键词
+    print("\n第 3 步：扩展关键词（可选，直接回车跳过）\n")
+    if template_data:
+        default_expanded = template_data["expanded_queries"]
+        print("默认扩展关键词：")
+        for q in default_expanded:
+            print(f"  - {q}")
+        user_input = input("\n直接回车使用默认，或输入自定义（逗号分隔）:\n> ").strip()
+        if user_input:
+            expanded_queries = [q.strip() for q in user_input.split(",") if q.strip()]
+        else:
+            expanded_queries = default_expanded
+    else:
+        print("请输入扩展关键词（逗号分隔，直接回车跳过）:")
+        user_input = input("> ").strip()
+        expanded_queries = [q.strip() for q in user_input.split(",") if q.strip()] if user_input else []
+
+    # Step 4: 飞书 Webhook
+    print("\n第 4 步：飞书通知（可选）\n")
+    webhook_url = input("请输入飞书 Webhook URL（直接回车跳过）:\n> ").strip()
+    webhook_env = ""
+    if webhook_url:
+        webhook_env = "FEISHU_WEBHOOK"
+        print("\n✅ 已配置飞书通知")
+        print(f"   请设置环境变量：export FEISHU_WEBHOOK=\"{webhook_url}\"")
+
+    # Step 5: 年份范围
+    print("\n第 5 步：年份范围\n")
+    years_from = input("起始年份 [2020]: ").strip() or "2020"
+    years_to = input("结束年份 [2027]: ").strip() or "2027"
+    try:
+        years_from = int(years_from)
+        years_to = int(years_to)
+    except ValueError:
+        print("❌ 无效年份，使用默认值")
+        years_from = 2020
+        years_to = 2027
+    print(f"\n✅ 年份范围：{years_from}-{years_to}")
+
+    # 生成配置
+    if template_data:
+        domain_keywords = template_data["domain_keywords"]
+        exploratory_queries = template_data["exploratory_queries"]
+        description = template_data["description"]
+    else:
+        domain_keywords = []
+        exploratory_queries = []
+        description = f"{profile_name} 论文自动搜集"
+
+    config = {
+        "profile_name": profile_name,
+        "description": description,
+        "output_dir": f"output/{profile_name.lower().replace(' ', '_')}",
+        "queries": {
+            "core": core_queries,
+            "expanded": expanded_queries,
+            "exploratory": exploratory_queries,
+        },
+        "domain_keywords": domain_keywords,
+        "filters": {
+            "years_from": years_from,
+            "years_to": years_to,
+            "allowed_categories": ["cs.CV", "cs.LG", "cs.AI"],
+            "blocked_keywords": [],
+        },
+        "scoring": {
+            "min_relevance_score": 2.5,
+            "core_threshold": 4.0,
+            "strongly_related_threshold": 2.5,
+        },
+        "notification": {
+            "type": "feishu" if webhook_env else "none",
+            "webhook_env": webhook_env,
+        },
+        "runtime": {
+            "max_results_per_query": 30,
+            "write_markdown_cards": True,
+            "write_readme": True,
+        },
+    }
+
+    # 保存配置
+    profiles_dir = Path("profiles")
+    profiles_dir.mkdir(exist_ok=True)
+    filename = profile_name.lower().replace(" ", "_").replace("/", "_") + ".json"
+    profile_path = profiles_dir / filename
+
+    with profile_path.open("w", encoding="utf-8") as f:
+        json.dump(config, f, ensure_ascii=False, indent=2)
+
+    print(f"\n{'=' * 40}")
+    print(f"✅ 配置已生成: {profile_path}")
+
+    print(f"\n📋 下一步：")
+    print(f"   1. git add {profile_path}")
+    print(f'   2. git commit -m "add {profile_name} profile"')
+    print(f"   3. git push")
+    print(f"   4. GitHub Actions 将每天自动运行")
+
+    if webhook_env:
+        print(f"\n🔔 飞书通知：")
+        print(f'   export FEISHU_WEBHOOK="{webhook_url}"')
+
+    print(f"\n🎯 完成！")
+
+
 def main() -> None:
-    if len(sys.argv) < 3:
-        print("Usage: python -m paper_hunter.cli run-daily <profile.json>")
-        print("       python -m paper_hunter.cli list-profiles")
+    if len(sys.argv) < 2:
+        print("Usage: python -m paper_hunter.cli <command> [args]")
+        print()
+        print("Commands:")
+        print("  init              交互式初始化向导")
+        print("  run-daily <profile>  运行每日搜集")
         sys.exit(1)
 
     command = sys.argv[1]
-    if command == "run-daily":
+    if command == "init":
+        run_init()
+    elif command == "run-daily":
+        if len(sys.argv) < 3:
+            print("Usage: python -m paper_hunter.cli run-daily <profile.json>")
+            sys.exit(1)
         run_daily(sys.argv[2])
     else:
         print(f"Unknown command: {command}")
