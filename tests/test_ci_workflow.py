@@ -21,7 +21,7 @@ def test_daily_workflow_handles_missing_output_directory():
     text = WORKFLOW.read_text(encoding="utf-8")
 
     assert "if [ -d output ]; then" in text
-    assert "git add output/" in text
+    assert "git add -f output/" in text
 
 
 def test_daily_workflow_runs_tests():

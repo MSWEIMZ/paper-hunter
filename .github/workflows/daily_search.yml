@@ -50,7 +50,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if [ -d output ]; then
-            git add output/
+            git add -f output/
           else
             echo "No output directory was generated."
             exit 0
