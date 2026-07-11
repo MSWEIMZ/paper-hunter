@@ -32,6 +32,7 @@ class ScoringConfig:
     citation_bonus_threshold: int = 50
     citation_bonus: float = 0.5
     blocked_penalty: float = 10.0
+    top_k: int = 5
 
 
 @dataclass
@@ -47,6 +48,11 @@ class NotificationConfig:
     webhook_env: str = ""  # 飞书 webhook 环境变量名
     telegram_token_env: str = ""  # Telegram Bot Token 环境变量名
     telegram_chat_env: str = ""  # Telegram Chat ID 环境变量名
+    smtp_host: str = ""
+    smtp_port: int = 587
+    smtp_user: str = ""
+    smtp_password_env: str = "SMTP_PASSWORD"
+    to_email: str = ""
 
 
 @dataclass
@@ -131,6 +137,7 @@ def load_profile(path: str | Path) -> ProfileConfig:
         min_relevance_score=s_raw.get("min_relevance_score", 2.5),
         core_threshold=s_raw.get("core_threshold", 4.0),
         strongly_related_threshold=s_raw.get("strongly_related_threshold", 2.5),
+        top_k=s_raw.get("top_k", 5),
     )
 
     # Runtime
@@ -146,6 +153,13 @@ def load_profile(path: str | Path) -> ProfileConfig:
     notification = NotificationConfig(
         type=n_raw.get("type", "none"),
         webhook_env=n_raw.get("webhook_env", ""),
+        telegram_token_env=n_raw.get("telegram_token_env", ""),
+        telegram_chat_env=n_raw.get("telegram_chat_env", ""),
+        smtp_host=n_raw.get("smtp_host", ""),
+        smtp_port=n_raw.get("smtp_port", 587),
+        smtp_user=n_raw.get("smtp_user", ""),
+        smtp_password_env=n_raw.get("smtp_password_env", "SMTP_PASSWORD"),
+        to_email=n_raw.get("to_email", ""),
     )
 
     # Schedule

@@ -22,7 +22,7 @@ from .dashboard import generate_dashboard_html
 from .citation_filler import fill_citations
 from .scorer import compute_multi_dimension_score
 from .topk import select_top_k, format_top_k_markdown
-from .notify import send_telegram_notification
+from .notify import send_email_notification, send_telegram_notification
 
 
 def run_daily(profile_path: str | Path) -> None:
@@ -56,7 +56,7 @@ def run_daily(profile_path: str | Path) -> None:
             config.profile_name, [], {},
             config.notification.webhook_env, [str(e)],
         )
-        return
+        raise RuntimeError(f"搜索失败: {e}") from e
 
     if not candidates:
         print("  无候选论文，退出")
@@ -77,9 +77,8 @@ def run_daily(profile_path: str | Path) -> None:
 
         categories = raw_paper.get("categories", [])
         allowed = set(config.filters.allowed_categories)
-        if categories and not any(c in allowed for c in categories):
-            if not any(c.startswith("cs.") for c in categories):
-                continue
+        if categories and allowed and not any(c in allowed for c in categories):
+            continue
 
         score = compute_score(
             raw_paper, query_type, search_query,
@@ -153,8 +152,8 @@ def run_daily(profile_path: str | Path) -> None:
     stats["noise_blocked_today"] = noise_blocked
 
     # Top K 推荐
-    top_k = config.scoring.top_k if hasattr(config.scoring, "top_k") else 5
-    top_papers = select_top_k(new_papers, k=top_k)
+    top_k = config.scoring.top_k
+    top_papers = select_top_k(new_records, k=top_k)
     if top_papers:
         topk_md = format_top_k_markdown(top_papers)
         (output_dir / "TOP_K.md").write_text(topk_md, encoding="utf-8")
@@ -176,6 +175,17 @@ def run_daily(profile_path: str | Path) -> None:
                 config.profile_name, new_records, stats,
                 tg_token, tg_chat,
             )
+
+    if config.notification.type == "email":
+        smtp_password = os.environ.get(config.notification.smtp_password_env, "")
+        send_email_notification(
+            config.profile_name, new_records, stats,
+            smtp_host=config.notification.smtp_host,
+            smtp_port=config.notification.smtp_port,
+            smtp_user=config.notification.smtp_user,
+            smtp_password=smtp_password,
+            to_email=config.notification.to_email,
+        )
 
     print(f"\n[DONE] added={added} updated={updated} noise_blocked={noise_blocked}")
     print(f"  输出目录: {output_dir}")
@@ -385,12 +395,15 @@ def run_init() -> None:
             "min_relevance_score": 2.5,
             "core_threshold": 4.0,
             "strongly_related_threshold": 2.5,
+            "top_k": 5,
         },
         "notification": {
             "type": notif_type,
             "webhook_env": webhook_env,
             "telegram_token_env": tg_token_env,
             "telegram_chat_env": tg_chat_env,
+            **email_config,
+            "smtp_password_env": "SMTP_PASSWORD" if notif_type == "email" else "",
         },
         "runtime": {
             "max_results_per_query": 30,
@@ -404,6 +417,7 @@ def run_init() -> None:
     }
 
     # 保存数据源配置
+    sources_config = _build_sources_config(sources)
     sources_path = Path("sources.json")
     with sources_path.open("w", encoding="utf-8") as f:
         json.dump(sources_config, f, ensure_ascii=False, indent=2)
@@ -461,6 +475,24 @@ def _parse_sources_config(raw: dict) -> SourcesConfig:
         ))
 
     return SourcesConfig(builtin=builtin, custom=custom)
+
+
+def _build_sources_config(enabled_sources: list[str]) -> dict:
+    """构建可直接写入 JSON 的数据源配置。"""
+    defaults = {
+        "arxiv": 30,
+        "semantic_scholar": 20,
+        "openalex": 20,
+        "crossref": 20,
+    }
+    enabled = set(enabled_sources)
+    return {
+        "builtin": {
+            name: {"enabled": name in enabled, "max_results": max_results}
+            for name, max_results in defaults.items()
+        },
+        "custom": [],
+    }
 
 
 def run_backfill(profile_path: str | Path) -> None:

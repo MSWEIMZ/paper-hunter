@@ -220,7 +220,7 @@ Run `python -m paper_hunter.cli init` and follow Step 6, or manually edit `sourc
 <details>
 <summary>How do I change the search schedule?</summary>
 
-Edit `profiles/xxx.json` → `schedule.cron`, or re-run `init` wizard Step 7.
+Edit the `cron` expression in `.github/workflows/daily_search.yml`. GitHub Actions schedules are defined by the workflow file and use UTC.
 </details>
 
 <details>

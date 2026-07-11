@@ -3,6 +3,7 @@ import json
 import pytest
 from pathlib import Path
 from paper_hunter.config import ProfileConfig, load_profile
+from paper_hunter.cli import _build_sources_config
 
 
 def test_load_minimal_profile(tmp_path):
@@ -46,8 +47,15 @@ def test_load_full_profile(tmp_path):
             "core_threshold": 4.5,
         },
         "notification": {
-            "type": "feishu",
+            "type": "telegram",
             "webhook_env": "MEDICAL_WEBHOOK",
+            "telegram_token_env": "TG_TOKEN",
+            "telegram_chat_env": "TG_CHAT",
+            "smtp_host": "smtp.example.com",
+            "smtp_port": 465,
+            "smtp_user": "sender@example.com",
+            "smtp_password_env": "SMTP_PASSWORD",
+            "to_email": "reader@example.com",
         },
     }
     p = tmp_path / "medical.json"
@@ -62,8 +70,15 @@ def test_load_full_profile(tmp_path):
     assert config.filters.years_to == 2026
     assert "q-bio" in config.filters.allowed_categories
     assert config.scoring.min_relevance_score == 3.0
-    assert config.notification.type == "feishu"
+    assert config.notification.type == "telegram"
     assert config.notification.webhook_env == "MEDICAL_WEBHOOK"
+    assert config.notification.telegram_token_env == "TG_TOKEN"
+    assert config.notification.telegram_chat_env == "TG_CHAT"
+    assert config.notification.smtp_host == "smtp.example.com"
+    assert config.notification.smtp_port == 465
+    assert config.notification.smtp_user == "sender@example.com"
+    assert config.notification.smtp_password_env == "SMTP_PASSWORD"
+    assert config.notification.to_email == "reader@example.com"
 
 
 def test_missing_queries_raises(tmp_path):
@@ -80,3 +95,12 @@ def test_missing_file_raises():
     """文件不存在应该报错"""
     with pytest.raises(FileNotFoundError):
         load_profile("/nonexistent/profile.json")
+
+
+def test_build_sources_config_is_json_serializable():
+    raw = _build_sources_config(["arxiv", "semantic_scholar"])
+
+    assert raw["builtin"]["arxiv"]["enabled"] is True
+    assert raw["builtin"]["semantic_scholar"]["enabled"] is True
+    assert raw["builtin"]["openalex"]["enabled"] is False
+    json.dumps(raw)

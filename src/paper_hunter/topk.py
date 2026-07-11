@@ -68,4 +68,4 @@ def format_top_k_markdown(top_papers: list[dict], lang: str = "zh") -> str:
             lines.append(f"> {summary}")
         lines.append("")
 
-    return "\\n".join(lines)
+    return "\n".join(lines)

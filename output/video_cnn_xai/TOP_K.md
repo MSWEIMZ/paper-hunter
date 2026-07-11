@@ -1,0 +1,16 @@
+## 🏆 今日推荐 Top K
+
+### 1. [Video-CoT: A Comprehensive Dataset for Spatiotemporal Understanding of Videos Based on Chain-of-Thought](http://arxiv.org/abs/2506.08817v3)
+**作者**: Shuyi Zhang, Xiaoshuai Hao+ | **综合分**: 3.76 | **新颖性**: 0.8 | **影响力**: 0.0 | **热度**: 0.0
+
+### 2. [Enhancing Video Understanding: Deep Neural Networks for Spatiotemporal Analysis](http://arxiv.org/abs/2502.07277v1)
+**作者**: Amir Hosein Fadaei, Mohammad-Reza A. Dehaqani | **综合分**: 3.76 | **新颖性**: 0.8 | **影响力**: 0.0 | **热度**: 0.0
+
+### 3. [Token Merging via Spatiotemporal Information Mining for Surgical Video Understanding](http://arxiv.org/abs/2509.23672v1)
+**作者**: Xixi Jiang, Chen Yang+ | **综合分**: 3.76 | **新颖性**: 0.8 | **影响力**: 0.0 | **热度**: 0.0
+
+### 4. [Video Understanding: From Geometry and Semantics to Unified Models](http://arxiv.org/abs/2603.17840v1)
+**作者**: Zhaochong An, Zirui Li+ | **综合分**: 3.72 | **新颖性**: 1.0 | **影响力**: 0.0 | **热度**: 0.0
+
+### 5. [Video-Oasis: Rethinking Evaluation of Video Understanding](http://arxiv.org/abs/2603.29616v2)
+**作者**: Geuntaek Lim, Sungjune Park+ | **综合分**: 3.72 | **新颖性**: 1.0 | **影响力**: 0.0 | **热度**: 0.0
