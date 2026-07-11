@@ -168,8 +168,7 @@ def _search_builtin_source(query: str, source_name: str, max_results: int) -> li
         return search_semantic_scholar(query, max_results)
     elif source_name == "openalex":
         return search_openalex(query, max_results)
-    else:
-        return []
+    raise ValueError(f"不支持的数据源: {source_name}")
 
 
 def collect_candidates(

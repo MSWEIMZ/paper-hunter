@@ -220,7 +220,7 @@ export TG_CHAT_ID="your-chat-id"
 <details>
 <summary>如何修改搜索时间？</summary>
 
-编辑 `profiles/xxx.json` → `schedule.cron`，或重新运行 `init` 向导第 7 步。
+编辑 `.github/workflows/daily_search.yml` 中的 `cron` 表达式。GitHub Actions 的定时任务由工作流文件定义，并使用 UTC 时间。
 </details>
 
 <details>

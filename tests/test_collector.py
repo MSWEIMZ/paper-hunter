@@ -1,6 +1,6 @@
 """论文收集器测试"""
 import pytest
-from paper_hunter.collector import _pre_filter, _is_duplicate
+from paper_hunter.collector import _pre_filter, _is_duplicate, _search_builtin_source
 
 
 def test_pre_filter_blocks():
@@ -40,3 +40,8 @@ def test_is_duplicate_similar_title():
     a = {"arxiv_id": "", "title": "Deep Learning for Medical Image Segmentation"}
     b = {"arxiv_id": "", "title": "Deep Learning for Medical Image Segmentation and Analysis"}
     assert _is_duplicate(a, b) is True
+
+
+def test_unsupported_builtin_source_fails_clearly():
+    with pytest.raises(ValueError, match="不支持的数据源"):
+        _search_builtin_source("query", "crossref", 5)

@@ -2,8 +2,7 @@ name: Daily Paper Search
 
 on:
   schedule:
-    # 默认每天北京时间早上 8 点 (UTC 0:00)
-    # 用户可以在 profiles/xxx.json 的 schedule.cron 中自定义
+    # 默认每天北京时间早上 8 点 (UTC 0:00)。修改时间需编辑此 cron。
     - cron: '0 0 * * *'
   workflow_dispatch:  # 允许手动触发
 
@@ -12,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
 
     steps:
       - name: Checkout repository
@@ -25,16 +26,22 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Run tests
+        run: python -m pytest -q
+
       - name: Run daily search for all profiles
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
         run: |
           for profile in profiles/*.json; do
             if [ -f "$profile" ]; then
               echo "=========================================="
               echo "Processing: $profile"
               echo "=========================================="
-              python -m paper_hunter.cli run-daily "$profile" || true
+              python -m paper_hunter.cli run-daily "$profile"
             fi
           done
 
@@ -42,7 +49,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/
+          if [ -d output ]; then
+            git add output/
+          else
+            echo "No output directory was generated."
+            exit 0
+          fi
+          if git diff --cached --quiet; then
+            echo "No output changes to commit."
+            exit 0
+          fi
           timestamp=$(date -u +"%Y-%m-%d %H:%M:%S")
-          git diff --cached --quiet || git commit -m "auto: update papers ($timestamp)"
+          git commit -m "auto: update papers ($timestamp)"
           git push
