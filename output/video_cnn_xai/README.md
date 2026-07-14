@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 280
+- **Total Papers**: 281
 - **Core Papers**: 93
-- **Strongly Related**: 187
-- **Last Updated**: 2026-07-13 01:24:16
+- **Strongly Related**: 188
+- **Last Updated**: 2026-07-14 01:13:41
 
 ## 🔥 Latest Core Papers
 
@@ -37,7 +37,7 @@
 ## 📅 Browse by Year
 
 <details>
-<summary>📅 2026 (14 papers)</summary>
+<summary>📅 2026 (15 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -48,6 +48,7 @@
 | 📎 | [EvoGround: Self-Evolving Video Agents for Video Te](http://arxiv.org/abs/2605.13803v1) | Video temporal grounding (VTG) takes an untrimmed video and a natural- | 3.6 |
 | 📎 | [Measuring What Matters: Synthetic Benchmarks for C](http://arxiv.org/abs/2606.04326v1) | Concept bottleneck models predict outcomes from high-level concepts de | 3.3 |
 | 📎 | [Causal Physics Steering in Video World Models via ](http://arxiv.org/abs/2605.24322v1) | Video world models learn representations of physical dynamics, but con | 3.3 |
+| 📎 | [Compositional Context Fine-Tuning Vision-Language ](http://arxiv.org/abs/2607.10797v1) | Assembly action understanding is a key enabler for effective human-rob | 3.3 |
 | 📎 | [Applied Explainability for Large Language Models: ](http://arxiv.org/abs/2604.15371v1) | Large language models (LLMs) achieve strong performance across many na | 3.1 |
 | 📎 | [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1) | Concept Bottleneck Models (CBMs) enhance the interpretability of deep  | 3.0 |
 | 📎 | [GEM-4D: Geometry-Enhanced Video World Models for R](http://arxiv.org/abs/2605.22882v3) | Video world models can generate realistic futures from a single instru | 2.8 |
