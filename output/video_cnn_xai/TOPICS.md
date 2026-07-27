@@ -10,7 +10,7 @@
 - [Causal Physics Steering in Video World Models via Concept Ac](http://arxiv.org/abs/2605.24322v1)
 - ... 还有 215 篇
 
-## Natural Language Processing (自然语言处理) - 126 篇
+## Natural Language Processing (自然语言处理) - 127 篇
 > 自然语言处理相关
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -18,19 +18,19 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Causal Physics Steering in Video World Models via Concept Ac](http://arxiv.org/abs/2605.24322v1)
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
-- ... 还有 121 篇
+- ... 还有 122 篇
 
-## Deep Learning (深度学习) - 122 篇
+## Deep Learning (深度学习) - 123 篇
 > 深度学习基础方法
 
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
 - [Causal Physics Steering in Video World Models via Concept Ac](http://arxiv.org/abs/2605.24322v1)
+- [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
-- [Energy-Gated Attention and Wavelet Positional Encoding: Comp](http://arxiv.org/abs/2605.26355v1)
-- ... 还有 117 篇
+- ... 还有 118 篇
 
-## Survey & Benchmark (综述与基准) - 112 篇
+## Survey & Benchmark (综述与基准) - 113 篇
 > 综述论文与基准测试
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -38,17 +38,17 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [EvoGround: Self-Evolving Video Agents for Video Temporal Gro](http://arxiv.org/abs/2605.13803v1)
 - [Measuring What Matters: Synthetic Benchmarks for Concept Bot](http://arxiv.org/abs/2606.04326v1)
-- ... 还有 107 篇
+- ... 还有 108 篇
 
-## Interpretability (可解释性) - 108 篇
+## Interpretability (可解释性) - 109 篇
 > 模型可解释性与可视化
 
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
+- [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
 - [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v2)
-- [Energy-Gated Attention and Wavelet Positional Encoding: Comp](http://arxiv.org/abs/2605.26355v1)
-- ... 还有 103 篇
+- ... 还有 104 篇
 
 ## Reinforcement Learning (强化学习) - 93 篇
 > 强化学习相关
@@ -60,25 +60,25 @@
 - [EvoGround: Self-Evolving Video Agents for Video Temporal Gro](http://arxiv.org/abs/2605.13803v1)
 - ... 还有 88 篇
 
-## Optimization (优化) - 62 篇
+## Optimization (优化) - 63 篇
 > 模型优化、压缩、加速
 
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
+- [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - [Token Merging via Spatiotemporal Information Mining for Surg](http://arxiv.org/abs/2509.23672v1)
-- [Text-Audio-Visual-conditioned Diffusion Model for Video Sali](http://arxiv.org/abs/2504.14267v1)
-- ... 还有 57 篇
+- ... 还有 58 篇
 
-## Generative Models (生成模型) - 50 篇
+## Generative Models (生成模型) - 51 篇
 > 生成对抗网络、变分自编码器、扩散模型等
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
+- [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v3)
 - [Visual-ERM: Reward Modeling for Visual Equivalence](http://arxiv.org/abs/2603.13224v2)
-- [AceVFI: A Comprehensive Survey of Advances in Video Frame In](http://arxiv.org/abs/2506.01061v3)
-- ... 还有 45 篇
+- ... 还有 46 篇
 
 ## Multimodal (多模态) - 50 篇
 > 多模态学习
