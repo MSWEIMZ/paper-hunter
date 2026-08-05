@@ -76,7 +76,7 @@
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
-- [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v3)
+- [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v4)
 - [Visual-ERM: Reward Modeling for Visual Equivalence](http://arxiv.org/abs/2603.13224v2)
 - ... 还有 46 篇
 
@@ -104,7 +104,7 @@
 > 机器人学习与控制
 
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
-- [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v3)
+- [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v4)
 - [Unified Video Action Model](http://arxiv.org/abs/2503.00200v3)
 - [3DAffordSplat: Efficient Affordance Reasoning with 3D Gaussi](http://arxiv.org/abs/2504.11218v2)
 - [LogicVista: Multimodal LLM Logical Reasoning Benchmark in Vi](http://arxiv.org/abs/2407.04973v1)
