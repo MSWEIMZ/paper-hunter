@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 282
-- **Core Papers**: 93
-- **Strongly Related**: 189
-- **Last Updated**: 2026-08-06 01:16:43
+- **Total Papers**: 284
+- **Core Papers**: 94
+- **Strongly Related**: 190
+- **Last Updated**: 2026-08-07 01:59:16
 
 ## 🔥 Latest Core Papers
 
@@ -194,7 +194,7 @@
 </details>
 
 <details>
-<summary>📅 2022 (28 papers)</summary>
+<summary>📅 2022 (29 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -226,6 +226,7 @@
 | 📎 | [Similarity Contrastive Estimation for Image and Vi](http://arxiv.org/abs/2212.11187v1) | Contrastive representation learning has proven to be an effective self | 2.8 |
 | 📎 | [Spatiotemporal modeling of European paleoclimate u](http://arxiv.org/abs/2211.08160v1) | Paleoclimatology -- the study of past climate -- is relevant beyond cl | 2.77 |
 | 📎 | [PyramidTNT: Improved Transformer-in-Transformer Ba](http://arxiv.org/abs/2201.00978v1) | Transformer networks have achieved great progress for computer vision  | 2.67 |
+| 📎 | [Post-hoc Concept Bottleneck Models](http://arxiv.org/abs/2205.15480v2) | Concept Bottleneck Models (CBMs) map the inputs onto a set of interpre | 2.5 |
 
 </details>
 
@@ -332,13 +333,14 @@
 </details>
 
 <details>
-<summary>📅 2018 (24 papers)</summary>
+<summary>📅 2018 (25 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
 | 🔥 | [ECO: Efficient Convolutional Network for Online Vi](http://arxiv.org/abs/1804.09066v2) | The state of the art in video understanding suffers from two problems: | 4.8 |
 | 🔥 | [Non-Local Video Denoising by CNN](http://arxiv.org/abs/1811.12758v2) | Non-local patch based methods were until recently state-of-the-art for | 4.63 |
 | 🔥 | [Review of Visual Saliency Detection with Comprehen](http://arxiv.org/abs/1803.03391v2) | Visual saliency detection model simulates the human visual system to p | 4.6 |
+| 🔥 | [Reduced-Gate Convolutional LSTM Using Predictive C](http://arxiv.org/abs/1810.07251v11) | Spatiotemporal sequence prediction is an important problem in deep lea | 4.6 |
 | 🔥 | [Morph: Flexible Acceleration for 3D CNN-based Vide](http://arxiv.org/abs/1810.06807v1) | The past several years have seen both an explosion in the use of Convo | 4.43 |
 | 🔥 | [Benchmark 3D eye-tracking dataset for visual salie](http://arxiv.org/abs/1803.04845v1) | Visual Attention Models (VAMs) predict the location of an image or vid | 4.4 |
 | 📎 | [Video to Fully Automatic 3D Hair Model](http://arxiv.org/abs/1809.04765v1) | Imagine taking a selfie video with your mobile phone and getting as ou | 3.97 |
