@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 284
+- **Total Papers**: 285
 - **Core Papers**: 94
-- **Strongly Related**: 190
-- **Last Updated**: 2026-08-09 00:44:40
+- **Strongly Related**: 191
+- **Last Updated**: 2026-08-10 00:46:14
 
 ## 🔥 Latest Core Papers
 
@@ -194,7 +194,7 @@
 </details>
 
 <details>
-<summary>📅 2022 (29 papers)</summary>
+<summary>📅 2022 (30 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -221,6 +221,7 @@
 | 📎 | [Transformer-based Personalized Attention Mechanism](http://arxiv.org/abs/2206.03003v2) | In medical image diagnosis, identifying the attention region, i. e. ,  | 3.0 |
 | 📎 | [Visual Attention Network](http://arxiv.org/abs/2202.09741v5) | While originally designed for natural language processing tasks, the s | 3.0 |
 | 📎 | [Concept Bottleneck Model with Additional Unsupervi](http://arxiv.org/abs/2202.01459v1) | With the increasing demands for accountability, interpretability is be | 3.0 |
+| 📎 | [Perceptual Quality Assessment of Virtual Reality V](http://arxiv.org/abs/2206.08751v3) | Investigating how people perceive virtual reality (VR) videos in the w | 2.97 |
 | 📎 | [NL2INTERFACE: Interactive Visualization Interface ](http://arxiv.org/abs/2209.08834v2) | We develop NL2INTERFACE to explore the potential of generating usable  | 2.8 |
 | 📎 | [Grad-CAM++ is Equivalent to Grad-CAM With Positive](http://arxiv.org/abs/2205.10838v1) | The Grad-CAM algorithm provides a way to identify what parts of an ima | 2.8 |
 | 📎 | [Similarity Contrastive Estimation for Image and Vi](http://arxiv.org/abs/2212.11187v1) | Contrastive representation learning has proven to be an effective self | 2.8 |
