@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 285
+- **Total Papers**: 286
 - **Core Papers**: 94
-- **Strongly Related**: 191
-- **Last Updated**: 2026-08-15 00:32:04
+- **Strongly Related**: 192
+- **Last Updated**: 2026-08-16 00:32:41
 
 ## 🔥 Latest Core Papers
 
@@ -111,7 +111,7 @@
 </details>
 
 <details>
-<summary>📅 2024 (41 papers)</summary>
+<summary>📅 2024 (42 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -142,6 +142,7 @@
 | 📎 | [SlowFast-LLaVA: A Strong Training-Free Baseline fo](http://arxiv.org/abs/2407.15841v2) | We propose SlowFast-LLaVA (or SF-LLaVA for short), a training-free vid | 3.1 |
 | 📎 | [LogicVista: Multimodal LLM Logical Reasoning Bench](http://arxiv.org/abs/2407.04973v1) | We propose LogicVista, an evaluation benchmark that assesses the integ | 3.1 |
 | 📎 | [Temporal Reasoning Transfer from Text to Video](http://arxiv.org/abs/2410.06166v1) | Video Large Language Models (Video LLMs) have shown promising capabili | 3.1 |
+| 📎 | [Slot-VLM: SlowFast Slots for Video-Language Modeli](http://arxiv.org/abs/2402.13088v1) | Video-Language Models (VLMs), powered by the advancements in Large Lan | 3.1 |
 | 📎 | [Beware of Validation by Eye: Visual Validation of ](http://arxiv.org/abs/2407.11625v2) | Visual validation of regression models in scatterplots is a common pra | 3.0 |
 | 📎 | [Attention Guided CAM: Visual Explanations of Visio](http://arxiv.org/abs/2402.04563v1) | Vision Transformer(ViT) is one of the most widely used models in the c | 3.0 |
 | 📎 | [PDZSeg: Adapting the Foundation Model for Dissecti](http://arxiv.org/abs/2411.18169v1) | Purpose: Endoscopic surgical environments present challenges for disse | 3.0 |
