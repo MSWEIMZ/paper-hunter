@@ -1,14 +1,14 @@
 # 📊 主题统计
 
-## Computer Vision (计算机视觉) - 222 篇
+## Computer Vision (计算机视觉) - 223 篇
 > 图像识别、目标检测、图像分割等
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
 - [Video-Oasis: Rethinking Evaluation of Video Understanding](http://arxiv.org/abs/2603.29616v2)
+- [NeuroPath: Brain-Inspired Dual-Pathway Graph Convolutional N](http://arxiv.org/abs/2608.17487v1)
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
-- [Causal Physics Steering in Video World Models via Concept Ac](http://arxiv.org/abs/2605.24322v1)
-- ... 还有 217 篇
+- ... 还有 218 篇
 
 ## Natural Language Processing (自然语言处理) - 129 篇
 > 自然语言处理相关
@@ -77,7 +77,7 @@
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v4)
-- [Qwen-Video-Edit: Instruction-Based Video Editing by Repurpos](http://arxiv.org/abs/2608.14790v1)
+- [Qwen-Video-Edit: Instruction-Based Video Editing by Repurpos](http://arxiv.org/abs/2608.14790v2)
 - ... 还有 47 篇
 
 ## Multimodal (多模态) - 52 篇

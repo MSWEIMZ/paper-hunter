@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 287
-- **Core Papers**: 94
+- **Total Papers**: 288
+- **Core Papers**: 95
 - **Strongly Related**: 193
-- **Last Updated**: 2026-08-19 00:30:33
+- **Last Updated**: 2026-08-20 00:31:14
 
 ## 🔥 Latest Core Papers
 
@@ -15,6 +15,7 @@
 |------|------|------|------|------|
 | 2026 | [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1) | Video understanding aims to enable models to perceive, reason about, and interac | Zhaochong An, Zirui Li+ | 4.3 |
 | 2026 | [Video-Oasis: Rethinking Evaluation of Video Understanding](http://arxiv.org/abs/2603.29616v2) | The inherent complexity of video understanding makes it difficult to determine w | Geuntaek Lim, Sungjune Park+ | 4.3 |
+| 2026 | [NeuroPath: Brain-Inspired Dual-Pathway Graph Convolutional N](http://arxiv.org/abs/2608.17487v1) | Skeleton-based action recognition aims to recognize human actions from sequences | Kanglei Zhou, Ruizhi Cai+ | 4.3 |
 | 2025 | [Video-CoT: A Comprehensive Dataset for Spatiotemporal Unders](http://arxiv.org/abs/2506.08817v3) | Video content comprehension is essential for various applications, ranging from  | Shuyi Zhang, Xiaoshuai Hao+ | 5.4 |
 | 2025 | [Enhancing Video Understanding: Deep Neural Networks for Spat](http://arxiv.org/abs/2502.07277v1) | It's no secret that video has become the primary way we share information online | Amir Hosein Fadaei, Mohammad-Reza A. Dehaqani | 5.4 |
 | 2025 | [Token Merging via Spatiotemporal Information Mining for Surg](http://arxiv.org/abs/2509.23672v1) | Vision Transformer models have shown impressive effectiveness in the surgical vi | Xixi Jiang, Chen Yang+ | 5.4 |
@@ -32,17 +33,17 @@
 | 2025 | [Concepts in Motion: Temporal Concept Bottleneck Model for In](http://arxiv.org/abs/2509.20899v3) | Concept Bottleneck Models (CBMs) enable interpretable image classification by st | Patrick Knab, Sascha Marton+ | 4.1 |
 | 2025 | [Image-to-Video Transfer Learning based on Image-Language Fou](http://arxiv.org/abs/2510.10671v3) | Image-Language Foundation Models (ILFMs) have demonstrated remarkable success in | Jinxuan Li, Chaolei Tan+ | 4.1 |
 | 2024 | [Can VLMs be used on videos for action recognition? LLMs are ](http://arxiv.org/abs/2407.14834v1) | Recent advancements have introduced multiple vision-language models (VLMs) demon | Harsh Lunia | 4.8 |
-| 2024 | [Relevance-guided Audio Visual Fusion for Video Saliency Pred](http://arxiv.org/abs/2411.11454v1) | Audio data, often synchronized with video frames, plays a crucial role in guidin | Li Yu, Xuanzhe Sun+ | 4.6 |
 
 ## 📅 Browse by Year
 
 <details>
-<summary>📅 2026 (17 papers)</summary>
+<summary>📅 2026 (18 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
 | 🔥 | [Video Understanding: From Geometry and Semantics t](http://arxiv.org/abs/2603.17840v1) | Video understanding aims to enable models to perceive, reason about, a | 4.3 |
 | 🔥 | [Video-Oasis: Rethinking Evaluation of Video Unders](http://arxiv.org/abs/2603.29616v2) | The inherent complexity of video understanding makes it difficult to d | 4.3 |
+| 🔥 | [NeuroPath: Brain-Inspired Dual-Pathway Graph Convo](http://arxiv.org/abs/2608.17487v1) | Skeleton-based action recognition aims to recognize human actions from | 4.3 |
 | 📎 | [3D-RFT: Reinforcement Fine-Tuning for Video-based ](http://arxiv.org/abs/2603.04976v2) | Reinforcement Learning with Verifiable Rewards ( RLVR ) has emerged as | 3.97 |
 | 📎 | [Malware Classification using Diluted Convolutional](http://arxiv.org/abs/2601.09933v1) | Android malware has become an increasingly critical threat to organiza | 3.7 |
 | 📎 | [EvoGround: Self-Evolving Video Agents for Video Te](http://arxiv.org/abs/2605.13803v1) | Video temporal grounding (VTG) takes an untrimmed video and a natural- | 3.6 |
@@ -53,7 +54,7 @@
 | 📎 | [Applied Explainability for Large Language Models: ](http://arxiv.org/abs/2604.15371v1) | Large language models (LLMs) achieve strong performance across many na | 3.1 |
 | 📎 | [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1) | Concept Bottleneck Models (CBMs) enhance the interpretability of deep  | 3.0 |
 | 📎 | [GEM-4D: Geometry-Enhanced Video World Models for R](http://arxiv.org/abs/2605.22882v4) | Video world models can generate realistic futures from a single instru | 2.8 |
-| 📎 | [Qwen-Video-Edit: Instruction-Based Video Editing b](http://arxiv.org/abs/2608.14790v1) | Instruction-based video editing is commonly built on video-pretrained  | 2.8 |
+| 📎 | [Qwen-Video-Edit: Instruction-Based Video Editing b](http://arxiv.org/abs/2608.14790v2) | Instruction-based video editing is commonly built on video-pretrained  | 2.8 |
 | 📎 | [Grounding Video Reasoning in Physical Signals](http://arxiv.org/abs/2604.21873v1) | Physical video understanding requires more than naming an event correc | 2.6 |
 | 📎 | [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v2) | Rapid progress in video models has largely focused on visual quality,  | 2.6 |
 | 📎 | [Energy-Gated Attention and Wavelet Positional Enco](http://arxiv.org/abs/2605.26355v1) | Standard transformer attention computes pairwise token similarity but  | 2.5 |
