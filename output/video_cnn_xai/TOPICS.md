@@ -77,7 +77,7 @@
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v4)
-- [Qwen-Video-Edit: Instruction-Based Video Editing by Repurpos](http://arxiv.org/abs/2608.14790v2)
+- [Instruction-Based Video Editing by Repurposing an Image Edit](http://arxiv.org/abs/2608.14790v3)
 - ... 还有 47 篇
 
 ## Multimodal (多模态) - 52 篇
