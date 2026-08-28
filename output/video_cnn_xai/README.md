@@ -7,7 +7,7 @@
 - **Total Papers**: 288
 - **Core Papers**: 95
 - **Strongly Related**: 193
-- **Last Updated**: 2026-08-27 05:21:25
+- **Last Updated**: 2026-08-28 07:19:12
 
 ## 🔥 Latest Core Papers
 
@@ -56,7 +56,7 @@
 | 📎 | [GEM-4D: Geometry-Enhanced Video World Models for R](http://arxiv.org/abs/2605.22882v4) | Video world models can generate realistic futures from a single instru | 2.8 |
 | 📎 | [Instruction-Based Video Editing by Repurposing an ](http://arxiv.org/abs/2608.14790v3) | Instruction-based video editing is commonly built on video-pretrained  | 2.8 |
 | 📎 | [Grounding Video Reasoning in Physical Signals](http://arxiv.org/abs/2604.21873v1) | Physical video understanding requires more than naming an event correc | 2.6 |
-| 📎 | [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v2) | Rapid progress in video models has largely focused on visual quality,  | 2.6 |
+| 📎 | [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3) | Rapid progress in video models has largely focused on visual quality,  | 2.6 |
 | 📎 | [Energy-Gated Attention and Wavelet Positional Enco](http://arxiv.org/abs/2605.26355v1) | Standard transformer attention computes pairwise token similarity but  | 2.5 |
 | 📎 | [Visual-ERM: Reward Modeling for Visual Equivalence](http://arxiv.org/abs/2603.13224v2) | Vision-to-code tasks require models to reconstruct structured visual i | 2.5 |
 

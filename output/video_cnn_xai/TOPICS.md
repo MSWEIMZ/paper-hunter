@@ -47,7 +47,7 @@
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
-- [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v2)
+- [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3)
 - ... 还有 105 篇
 
 ## Reinforcement Learning (强化学习) - 95 篇
@@ -86,14 +86,14 @@
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
 - [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
 - [Grounding Video Reasoning in Physical Signals](http://arxiv.org/abs/2604.21873v1)
-- [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v2)
+- [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3)
 - [Visual-ERM: Reward Modeling for Visual Equivalence](http://arxiv.org/abs/2603.13224v2)
 - ... 还有 47 篇
 
 ## Medical AI (医学 AI) - 18 篇
 > 医学影像与临床 AI
 
-- [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v2)
+- [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3)
 - [Brain Effective Connectivity Estimation via Fourier Spatiote](http://arxiv.org/abs/2503.11283v1)
 - [Region-Aware Multimodal Large Language Model via SlowFast To](http://arxiv.org/abs/2506.23102v3)
 - [Advanced Gesture Recognition for Autism Spectrum Disorder De](http://arxiv.org/abs/2410.09339v3)
