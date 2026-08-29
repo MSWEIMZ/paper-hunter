@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 288
+- **Total Papers**: 289
 - **Core Papers**: 95
-- **Strongly Related**: 193
-- **Last Updated**: 2026-08-28 07:19:12
+- **Strongly Related**: 194
+- **Last Updated**: 2026-08-29 04:30:33
 
 ## 🔥 Latest Core Papers
 
@@ -63,7 +63,7 @@
 </details>
 
 <details>
-<summary>📅 2025 (42 papers)</summary>
+<summary>📅 2025 (43 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -95,6 +95,7 @@
 | 📎 | [Visual Reasoning Tracer: Object-Level Grounded Rea](http://arxiv.org/abs/2512.05091v1) | Recent advances in Multimodal Large Language Models (MLLMs) have signi | 3.1 |
 | 📎 | [Explain Before You Answer: A Survey on Composition](http://arxiv.org/abs/2508.17298v3) | Compositional visual reasoning has emerged as a key research frontier  | 3.1 |
 | 📎 | [AlcheMinT: Fine-grained Temporal Control for Multi](http://arxiv.org/abs/2512.10943v1) | Recent advances in subject-driven video generation with large diffusio | 3.1 |
+| 📎 | [SlowFast-LLaVA-1.5: A Family of Token-Efficient Vi](http://arxiv.org/abs/2503.18943v2) | We introduce SlowFast-LLaVA-1. 5 (abbreviated as SF-LLaVA-1. 5), a fam | 3.1 |
 | 📎 | [SAM 3D: 3Dfy Anything in Images](http://arxiv.org/abs/2511.16624v2) | We present SAM 3D, a generative model for visually grounded 3D object  | 3.0 |
 | 📎 | [A Method for Evaluating the Interpretability of Ma](http://arxiv.org/abs/2502.19615v1) | Interpretability analysis methods for artificial intelligence models,  | 3.0 |
 | 📎 | [Flexible Concept Bottleneck Model](http://arxiv.org/abs/2511.06678v1) | Concept bottleneck models (CBMs) improve neural network interpretabili | 3.0 |
