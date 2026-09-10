@@ -3,14 +3,14 @@
 ## Computer Vision (计算机视觉) - 224 篇
 > 图像识别、目标检测、图像分割等
 
+- [NeuroPath: Brain-Inspired Dual-Pathway Graph Convolutional N](http://arxiv.org/abs/2608.17487v1)
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
 - [Video-Oasis: Rethinking Evaluation of Video Understanding](http://arxiv.org/abs/2603.29616v2)
-- [NeuroPath: Brain-Inspired Dual-Pathway Graph Convolutional N](http://arxiv.org/abs/2608.17487v1)
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
 - ... 还有 219 篇
 
-## Natural Language Processing (自然语言处理) - 130 篇
+## Natural Language Processing (自然语言处理) - 131 篇
 > 自然语言处理相关
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -18,7 +18,7 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Causal Physics Steering in Video World Models via Concept Ac](http://arxiv.org/abs/2605.24322v1)
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
-- ... 还有 125 篇
+- ... 还有 126 篇
 
 ## Deep Learning (深度学习) - 126 篇
 > 深度学习基础方法
@@ -40,15 +40,15 @@
 - [Measuring What Matters: Synthetic Benchmarks for Concept Bot](http://arxiv.org/abs/2606.04326v1)
 - ... 还有 110 篇
 
-## Interpretability (可解释性) - 110 篇
+## Interpretability (可解释性) - 111 篇
 > 模型可解释性与可视化
 
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
-- [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3)
-- ... 还有 105 篇
+- [Do New Attention Mechanisms Actually Fix Attention Sinks at ](http://arxiv.org/abs/2609.08574v1)
+- ... 还有 106 篇
 
 ## Reinforcement Learning (强化学习) - 95 篇
 > 强化学习相关

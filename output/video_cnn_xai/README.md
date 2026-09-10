@@ -4,18 +4,18 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 289
+- **Total Papers**: 290
 - **Core Papers**: 95
-- **Strongly Related**: 194
-- **Last Updated**: 2026-09-09 01:48:40
+- **Strongly Related**: 195
+- **Last Updated**: 2026-09-10 01:44:44
 
 ## 🔥 Latest Core Papers
 
 | Year | Title | Summary | Author | Score |
 |------|------|------|------|------|
+| 2026 | [NeuroPath: Brain-Inspired Dual-Pathway Graph Convolutional N](http://arxiv.org/abs/2608.17487v1) | Skeleton-based action recognition aims to recognize human actions from sequences | Kanglei Zhou, Ruizhi Cai+ | 4.5 |
 | 2026 | [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1) | Video understanding aims to enable models to perceive, reason about, and interac | Zhaochong An, Zirui Li+ | 4.3 |
 | 2026 | [Video-Oasis: Rethinking Evaluation of Video Understanding](http://arxiv.org/abs/2603.29616v2) | The inherent complexity of video understanding makes it difficult to determine w | Geuntaek Lim, Sungjune Park+ | 4.3 |
-| 2026 | [NeuroPath: Brain-Inspired Dual-Pathway Graph Convolutional N](http://arxiv.org/abs/2608.17487v1) | Skeleton-based action recognition aims to recognize human actions from sequences | Kanglei Zhou, Ruizhi Cai+ | 4.3 |
 | 2025 | [Video-CoT: A Comprehensive Dataset for Spatiotemporal Unders](http://arxiv.org/abs/2506.08817v3) | Video content comprehension is essential for various applications, ranging from  | Shuyi Zhang, Xiaoshuai Hao+ | 5.4 |
 | 2025 | [Enhancing Video Understanding: Deep Neural Networks for Spat](http://arxiv.org/abs/2502.07277v1) | It's no secret that video has become the primary way we share information online | Amir Hosein Fadaei, Mohammad-Reza A. Dehaqani | 5.4 |
 | 2025 | [Token Merging via Spatiotemporal Information Mining for Surg](http://arxiv.org/abs/2509.23672v1) | Vision Transformer models have shown impressive effectiveness in the surgical vi | Xixi Jiang, Chen Yang+ | 5.4 |
@@ -37,13 +37,13 @@
 ## 📅 Browse by Year
 
 <details>
-<summary>📅 2026 (18 papers)</summary>
+<summary>📅 2026 (19 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
+| 🔥 | [NeuroPath: Brain-Inspired Dual-Pathway Graph Convo](http://arxiv.org/abs/2608.17487v1) | Skeleton-based action recognition aims to recognize human actions from | 4.5 |
 | 🔥 | [Video Understanding: From Geometry and Semantics t](http://arxiv.org/abs/2603.17840v1) | Video understanding aims to enable models to perceive, reason about, a | 4.3 |
 | 🔥 | [Video-Oasis: Rethinking Evaluation of Video Unders](http://arxiv.org/abs/2603.29616v2) | The inherent complexity of video understanding makes it difficult to d | 4.3 |
-| 🔥 | [NeuroPath: Brain-Inspired Dual-Pathway Graph Convo](http://arxiv.org/abs/2608.17487v1) | Skeleton-based action recognition aims to recognize human actions from | 4.3 |
 | 📎 | [3D-RFT: Reinforcement Fine-Tuning for Video-based ](http://arxiv.org/abs/2603.04976v2) | Reinforcement Learning with Verifiable Rewards ( RLVR ) has emerged as | 3.97 |
 | 📎 | [Malware Classification using Diluted Convolutional](http://arxiv.org/abs/2601.09933v1) | Android malware has become an increasingly critical threat to organiza | 3.7 |
 | 📎 | [EvoGround: Self-Evolving Video Agents for Video Te](http://arxiv.org/abs/2605.13803v1) | Video temporal grounding (VTG) takes an untrimmed video and a natural- | 3.6 |
@@ -55,6 +55,7 @@
 | 📎 | [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1) | Concept Bottleneck Models (CBMs) enhance the interpretability of deep  | 3.0 |
 | 📎 | [GEM-4D: Geometry-Enhanced Video World Models for R](http://arxiv.org/abs/2605.22882v4) | Video world models can generate realistic futures from a single instru | 2.8 |
 | 📎 | [Instruction-Based Video Editing by Repurposing an ](http://arxiv.org/abs/2608.14790v3) | Instruction-based video editing is commonly built on video-pretrained  | 2.8 |
+| 📎 | [Do New Attention Mechanisms Actually Fix Attention](http://arxiv.org/abs/2609.08574v1) | Long context language models now advertise windows of one million toke | 2.63 |
 | 📎 | [Grounding Video Reasoning in Physical Signals](http://arxiv.org/abs/2604.21873v1) | Physical video understanding requires more than naming an event correc | 2.6 |
 | 📎 | [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3) | Rapid progress in video models has largely focused on visual quality,  | 2.6 |
 | 📎 | [Energy-Gated Attention and Wavelet Positional Enco](http://arxiv.org/abs/2605.26355v1) | Standard transformer attention computes pairwise token similarity but  | 2.5 |
