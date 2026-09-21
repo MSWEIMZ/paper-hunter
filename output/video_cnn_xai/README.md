@@ -7,7 +7,7 @@
 - **Total Papers**: 290
 - **Core Papers**: 95
 - **Strongly Related**: 195
-- **Last Updated**: 2026-09-20 01:56:47
+- **Last Updated**: 2026-09-21 01:57:53
 
 ## 🔥 Latest Core Papers
 
@@ -55,7 +55,7 @@
 | 📎 | [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1) | Concept Bottleneck Models (CBMs) enhance the interpretability of deep  | 3.0 |
 | 📎 | [GEM-4D: Geometry-Enhanced Video World Models for R](http://arxiv.org/abs/2605.22882v4) | Video world models can generate realistic futures from a single instru | 2.8 |
 | 📎 | [Instruction-Based Video Editing by Repurposing an ](http://arxiv.org/abs/2608.14790v3) | Instruction-based video editing is commonly built on video-pretrained  | 2.8 |
-| 📎 | [Do New Attention Mechanisms Actually Fix Attention](http://arxiv.org/abs/2609.08574v1) | Long context language models now advertise windows of one million toke | 2.63 |
+| 📎 | [Do New Attention Mechanisms Actually Fix Attention](http://arxiv.org/abs/2609.08574v2) | Long context language models now advertise windows of one million toke | 2.63 |
 | 📎 | [Grounding Video Reasoning in Physical Signals](http://arxiv.org/abs/2604.21873v1) | Physical video understanding requires more than naming an event correc | 2.6 |
 | 📎 | [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3) | Rapid progress in video models has largely focused on visual quality,  | 2.6 |
 | 📎 | [Energy-Gated Attention and Wavelet Positional Enco](http://arxiv.org/abs/2605.26355v1) | Standard transformer attention computes pairwise token similarity but  | 2.5 |

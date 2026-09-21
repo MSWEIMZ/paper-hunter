@@ -47,7 +47,7 @@
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
-- [Do New Attention Mechanisms Actually Fix Attention Sinks at ](http://arxiv.org/abs/2609.08574v1)
+- [Do New Attention Mechanisms Actually Fix Attention Sinks at ](http://arxiv.org/abs/2609.08574v2)
 - ... 还有 106 篇
 
 ## Reinforcement Learning (强化学习) - 95 篇
