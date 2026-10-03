@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 290
+- **Total Papers**: 291
 - **Core Papers**: 95
-- **Strongly Related**: 195
-- **Last Updated**: 2026-10-02 02:48:10
+- **Strongly Related**: 196
+- **Last Updated**: 2026-10-03 02:33:55
 
 ## 🔥 Latest Core Papers
 
@@ -37,7 +37,7 @@
 ## 📅 Browse by Year
 
 <details>
-<summary>📅 2026 (19 papers)</summary>
+<summary>📅 2026 (20 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -60,6 +60,7 @@
 | 📎 | [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3) | Rapid progress in video models has largely focused on visual quality,  | 2.6 |
 | 📎 | [Energy-Gated Attention and Wavelet Positional Enco](http://arxiv.org/abs/2605.26355v1) | Standard transformer attention computes pairwise token similarity but  | 2.5 |
 | 📎 | [Visual-ERM: Reward Modeling for Visual Equivalence](http://arxiv.org/abs/2603.13224v2) | Vision-to-code tasks require models to reconstruct structured visual i | 2.5 |
+| 📎 | [NS-ATTENTION: Newton-Schulz Transformations of Att](http://arxiv.org/abs/2609.27735v3) | Newton-Schulz (NS) iteration has recently been used in the Muon optimi | 2.5 |
 
 </details>
 
