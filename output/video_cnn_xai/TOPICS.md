@@ -10,7 +10,7 @@
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
 - ... 还有 219 篇
 
-## Natural Language Processing (自然语言处理) - 132 篇
+## Natural Language Processing (自然语言处理) - 133 篇
 > 自然语言处理相关
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -18,9 +18,9 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Causal Physics Steering in Video World Models via Concept Ac](http://arxiv.org/abs/2605.24322v1)
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
-- ... 还有 127 篇
+- ... 还有 128 篇
 
-## Deep Learning (深度学习) - 127 篇
+## Deep Learning (深度学习) - 128 篇
 > 深度学习基础方法
 
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
@@ -28,7 +28,7 @@
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
-- ... 还有 122 篇
+- ... 还有 123 篇
 
 ## Survey & Benchmark (综述与基准) - 116 篇
 > 综述论文与基准测试
@@ -40,7 +40,7 @@
 - [Measuring What Matters: Synthetic Benchmarks for Concept Bot](http://arxiv.org/abs/2606.04326v1)
 - ... 还有 111 篇
 
-## Interpretability (可解释性) - 112 篇
+## Interpretability (可解释性) - 113 篇
 > 模型可解释性与可视化
 
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
@@ -48,7 +48,7 @@
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
 - [Do New Attention Mechanisms Actually Fix Attention Sinks at ](http://arxiv.org/abs/2609.08574v2)
-- ... 还有 107 篇
+- ... 还有 108 篇
 
 ## Reinforcement Learning (强化学习) - 95 篇
 > 强化学习相关
@@ -70,7 +70,7 @@
 - [Token Merging via Spatiotemporal Information Mining for Surg](http://arxiv.org/abs/2509.23672v1)
 - ... 还有 61 篇
 
-## Generative Models (生成模型) - 52 篇
+## Generative Models (生成模型) - 53 篇
 > 生成对抗网络、变分自编码器、扩散模型等
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -78,9 +78,9 @@
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v4)
 - [Instruction-Based Video Editing by Repurposing an Image Edit](http://arxiv.org/abs/2608.14790v3)
-- ... 还有 47 篇
+- ... 还有 48 篇
 
-## Multimodal (多模态) - 52 篇
+## Multimodal (多模态) - 53 篇
 > 多模态学习
 
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
@@ -88,7 +88,7 @@
 - [Grounding Video Reasoning in Physical Signals](http://arxiv.org/abs/2604.21873v1)
 - [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3)
 - [Visual-ERM: Reward Modeling for Visual Equivalence](http://arxiv.org/abs/2603.13224v2)
-- ... 还有 47 篇
+- ... 还有 48 篇
 
 ## Medical AI (医学 AI) - 18 篇
 > 医学影像与临床 AI

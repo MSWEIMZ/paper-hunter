@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 291
+- **Total Papers**: 292
 - **Core Papers**: 95
-- **Strongly Related**: 196
-- **Last Updated**: 2026-10-05 02:38:27
+- **Strongly Related**: 197
+- **Last Updated**: 2026-10-06 03:31:46
 
 ## 🔥 Latest Core Papers
 
@@ -65,7 +65,7 @@
 </details>
 
 <details>
-<summary>📅 2025 (43 papers)</summary>
+<summary>📅 2025 (44 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -93,6 +93,7 @@
 | 📎 | [Predicting concentration levels of air pollutants ](http://arxiv.org/abs/2502.01654v1) | Air pollution (AP) poses a great threat to human health, and people ar | 3.3 |
 | 📎 | [Radial Attention: $O(n\log n)$ Sparse Attention wi](http://arxiv.org/abs/2506.19852v2) | Recent advances in diffusion models have enabled high-quality video ge | 3.3 |
 | 📎 | [The Temporal Trap: Entanglement in Pre-Trained Vis](http://arxiv.org/abs/2502.03270v3) | The integration of pre-trained visual representations (PVRs) has signi | 3.3 |
+| 📎 | [Transform Trained Transformer for Accelerating Nat](http://arxiv.org/abs/2512.13492v2) | Native 4K (2176$\times$3840) video generation remains a critical chall | 3.3 |
 | 📎 | [nnterp: A Standardized Interface for Mechanistic I](http://arxiv.org/abs/2511.14465v2) | Mechanistic interpretability research requires reliable tools for anal | 3.13 |
 | 📎 | [Visual Reasoning Tracer: Object-Level Grounded Rea](http://arxiv.org/abs/2512.05091v1) | Recent advances in Multimodal Large Language Models (MLLMs) have signi | 3.1 |
 | 📎 | [Explain Before You Answer: A Survey on Composition](http://arxiv.org/abs/2508.17298v3) | Compositional visual reasoning has emerged as a key research frontier  | 3.1 |
