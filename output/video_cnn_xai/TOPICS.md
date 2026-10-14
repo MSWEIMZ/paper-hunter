@@ -30,15 +30,15 @@
 - [HuC-VideoMAE: Human-Centric Video Masked Autoencoding from s](http://arxiv.org/abs/2610.08433v1)
 - ... 还有 124 篇
 
-## Survey & Benchmark (综述与基准) - 116 篇
+## Survey & Benchmark (综述与基准) - 117 篇
 > 综述论文与基准测试
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
 - [Video-Oasis: Rethinking Evaluation of Video Understanding](http://arxiv.org/abs/2603.29616v2)
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [EvoGround: Self-Evolving Video Agents for Video Temporal Gro](http://arxiv.org/abs/2605.13803v1)
-- [Measuring What Matters: Synthetic Benchmarks for Concept Bot](http://arxiv.org/abs/2606.04326v1)
-- ... 还有 111 篇
+- [Grounding with Confidence: Controllable Generative Video Tem](http://arxiv.org/abs/2609.39883v4)
+- ... 还有 112 篇
 
 ## Interpretability (可解释性) - 113 篇
 > 模型可解释性与可视化
@@ -50,7 +50,7 @@
 - [Do New Attention Mechanisms Actually Fix Attention Sinks at ](http://arxiv.org/abs/2609.08574v2)
 - ... 还有 108 篇
 
-## Reinforcement Learning (强化学习) - 95 篇
+## Reinforcement Learning (强化学习) - 96 篇
 > 强化学习相关
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -58,27 +58,27 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
 - [EvoGround: Self-Evolving Video Agents for Video Temporal Gro](http://arxiv.org/abs/2605.13803v1)
-- ... 还有 90 篇
+- ... 还有 91 篇
 
-## Optimization (优化) - 66 篇
+## Optimization (优化) - 67 篇
 > 模型优化、压缩、加速
 
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
+- [Grounding with Confidence: Controllable Generative Video Tem](http://arxiv.org/abs/2609.39883v4)
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
-- [Token Merging via Spatiotemporal Information Mining for Surg](http://arxiv.org/abs/2509.23672v1)
-- ... 还有 61 篇
+- ... 还有 62 篇
 
-## Generative Models (生成模型) - 53 篇
+## Generative Models (生成模型) - 54 篇
 > 生成对抗网络、变分自编码器、扩散模型等
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
+- [Grounding with Confidence: Controllable Generative Video Tem](http://arxiv.org/abs/2609.39883v4)
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v4)
-- [Instruction-Based Video Editing by Repurposing an Image Edit](http://arxiv.org/abs/2608.14790v3)
-- ... 还有 48 篇
+- ... 还有 49 篇
 
 ## Multimodal (多模态) - 53 篇
 > 多模态学习

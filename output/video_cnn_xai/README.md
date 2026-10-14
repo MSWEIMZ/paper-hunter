@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 293
+- **Total Papers**: 294
 - **Core Papers**: 95
-- **Strongly Related**: 198
-- **Last Updated**: 2026-10-13 04:09:51
+- **Strongly Related**: 199
+- **Last Updated**: 2026-10-14 02:23:38
 
 ## 🔥 Latest Core Papers
 
@@ -37,7 +37,7 @@
 ## 📅 Browse by Year
 
 <details>
-<summary>📅 2026 (21 papers)</summary>
+<summary>📅 2026 (22 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -47,6 +47,7 @@
 | 📎 | [3D-RFT: Reinforcement Fine-Tuning for Video-based ](http://arxiv.org/abs/2603.04976v2) | Reinforcement Learning with Verifiable Rewards ( RLVR ) has emerged as | 3.97 |
 | 📎 | [Malware Classification using Diluted Convolutional](http://arxiv.org/abs/2601.09933v1) | Android malware has become an increasingly critical threat to organiza | 3.7 |
 | 📎 | [EvoGround: Self-Evolving Video Agents for Video Te](http://arxiv.org/abs/2605.13803v1) | Video temporal grounding (VTG) takes an untrimmed video and a natural- | 3.6 |
+| 📎 | [Grounding with Confidence: Controllable Generative](http://arxiv.org/abs/2609.39883v4) | Video temporal grounding supports applications such as video search, c | 3.6 |
 | 📎 | [Measuring What Matters: Synthetic Benchmarks for C](http://arxiv.org/abs/2606.04326v1) | Concept bottleneck models predict outcomes from high-level concepts de | 3.3 |
 | 📎 | [Causal Physics Steering in Video World Models via ](http://arxiv.org/abs/2605.24322v1) | Video world models learn representations of physical dynamics, but con | 3.3 |
 | 📎 | [Compositional Context Fine-Tuning Vision-Language ](http://arxiv.org/abs/2607.10797v1) | Assembly action understanding is a key enabler for effective human-rob | 3.3 |
