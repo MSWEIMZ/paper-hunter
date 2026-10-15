@@ -1,6 +1,6 @@
 # 📊 主题统计
 
-## Computer Vision (计算机视觉) - 225 篇
+## Computer Vision (计算机视觉) - 226 篇
 > 图像识别、目标检测、图像分割等
 
 - [NeuroPath: Brain-Inspired Dual-Pathway Graph Convolutional N](http://arxiv.org/abs/2608.17487v1)
@@ -8,7 +8,7 @@
 - [Video-Oasis: Rethinking Evaluation of Video Understanding](http://arxiv.org/abs/2603.29616v2)
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
-- ... 还有 220 篇
+- ... 还有 221 篇
 
 ## Natural Language Processing (自然语言处理) - 134 篇
 > 自然语言处理相关
@@ -30,7 +30,7 @@
 - [HuC-VideoMAE: Human-Centric Video Masked Autoencoding from s](http://arxiv.org/abs/2610.08433v1)
 - ... 还有 124 篇
 
-## Survey & Benchmark (综述与基准) - 117 篇
+## Survey & Benchmark (综述与基准) - 118 篇
 > 综述论文与基准测试
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -38,7 +38,7 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [EvoGround: Self-Evolving Video Agents for Video Temporal Gro](http://arxiv.org/abs/2605.13803v1)
 - [Grounding with Confidence: Controllable Generative Video Tem](http://arxiv.org/abs/2609.39883v4)
-- ... 还有 112 篇
+- ... 还有 113 篇
 
 ## Interpretability (可解释性) - 113 篇
 > 模型可解释性与可视化
@@ -50,7 +50,7 @@
 - [Do New Attention Mechanisms Actually Fix Attention Sinks at ](http://arxiv.org/abs/2609.08574v2)
 - ... 还有 108 篇
 
-## Reinforcement Learning (强化学习) - 96 篇
+## Reinforcement Learning (强化学习) - 97 篇
 > 强化学习相关
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -58,7 +58,7 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
 - [EvoGround: Self-Evolving Video Agents for Video Temporal Gro](http://arxiv.org/abs/2605.13803v1)
-- ... 还有 91 篇
+- ... 还有 92 篇
 
 ## Optimization (优化) - 67 篇
 > 模型优化、压缩、加速

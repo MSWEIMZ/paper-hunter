@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 294
+- **Total Papers**: 295
 - **Core Papers**: 95
-- **Strongly Related**: 199
-- **Last Updated**: 2026-10-14 02:23:38
+- **Strongly Related**: 200
+- **Last Updated**: 2026-10-15 02:04:57
 
 ## 🔥 Latest Core Papers
 
@@ -37,7 +37,7 @@
 ## 📅 Browse by Year
 
 <details>
-<summary>📅 2026 (22 papers)</summary>
+<summary>📅 2026 (23 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -63,6 +63,7 @@
 | 📎 | [Energy-Gated Attention and Wavelet Positional Enco](http://arxiv.org/abs/2605.26355v1) | Standard transformer attention computes pairwise token similarity but  | 2.5 |
 | 📎 | [Visual-ERM: Reward Modeling for Visual Equivalence](http://arxiv.org/abs/2603.13224v2) | Vision-to-code tasks require models to reconstruct structured visual i | 2.5 |
 | 📎 | [NS-ATTENTION: Newton-Schulz Transformations of Att](http://arxiv.org/abs/2609.27735v3) | Newton-Schulz (NS) iteration has recently been used in the Muon optimi | 2.5 |
+| 📎 | [Open-o3-Video-v2: Seek, Ground, and Reason with Ve](http://arxiv.org/abs/2610.17656v1) | Reliable video reasoning requires models to produce correct answers an | 2.5 |
 
 </details>
 
