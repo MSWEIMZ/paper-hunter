@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 295
+- **Total Papers**: 296
 - **Core Papers**: 95
-- **Strongly Related**: 200
-- **Last Updated**: 2026-10-18 01:47:06
+- **Strongly Related**: 201
+- **Last Updated**: 2026-10-20 02:21:06
 
 ## 🔥 Latest Core Papers
 
@@ -37,7 +37,7 @@
 ## 📅 Browse by Year
 
 <details>
-<summary>📅 2026 (23 papers)</summary>
+<summary>📅 2026 (24 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -54,6 +54,7 @@
 | 📎 | [Interior interpretability with attention rollout: ](http://arxiv.org/abs/2607.22367v1) | Feature-attribution methods assign scores relating input variables to  | 3.3 |
 | 📎 | [Applied Explainability for Large Language Models: ](http://arxiv.org/abs/2604.15371v1) | Large language models (LLMs) achieve strong performance across many na | 3.1 |
 | 📎 | [HuC-VideoMAE: Human-Centric Video Masked Autoencod](http://arxiv.org/abs/2610.08433v1) | Modern action recognition models rely on video transformers pretrained | 3.1 |
+| 📎 | [The Explainability Illusion: Must ViTs Exhibit Pat](http://arxiv.org/abs/2610.25289v1) | Transformers are widely assumed to exhibit token-decoding explainabili | 3.1 |
 | 📎 | [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1) | Concept Bottleneck Models (CBMs) enhance the interpretability of deep  | 3.0 |
 | 📎 | [GEM-4D: Geometry-Enhanced Video World Models for R](http://arxiv.org/abs/2605.22882v4) | Video world models can generate realistic futures from a single instru | 2.8 |
 | 📎 | [Instruction-Based Video Editing by Repurposing an ](http://arxiv.org/abs/2608.14790v3) | Instruction-based video editing is commonly built on video-pretrained  | 2.8 |
