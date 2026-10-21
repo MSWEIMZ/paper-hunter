@@ -1,6 +1,6 @@
 # 📊 主题统计
 
-## Computer Vision (计算机视觉) - 227 篇
+## Computer Vision (计算机视觉) - 228 篇
 > 图像识别、目标检测、图像分割等
 
 - [NeuroPath: Brain-Inspired Dual-Pathway Graph Convolutional N](http://arxiv.org/abs/2608.17487v1)
@@ -8,7 +8,7 @@
 - [Video-Oasis: Rethinking Evaluation of Video Understanding](http://arxiv.org/abs/2603.29616v2)
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
-- ... 还有 222 篇
+- ... 还有 223 篇
 
 ## Natural Language Processing (自然语言处理) - 135 篇
 > 自然语言处理相关
@@ -30,7 +30,7 @@
 - [HuC-VideoMAE: Human-Centric Video Masked Autoencoding from s](http://arxiv.org/abs/2610.08433v1)
 - ... 还有 125 篇
 
-## Survey & Benchmark (综述与基准) - 118 篇
+## Survey & Benchmark (综述与基准) - 119 篇
 > 综述论文与基准测试
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -38,17 +38,17 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [EvoGround: Self-Evolving Video Agents for Video Temporal Gro](http://arxiv.org/abs/2605.13803v1)
 - [Grounding with Confidence: Controllable Generative Video Tem](http://arxiv.org/abs/2609.39883v4)
-- ... 还有 113 篇
+- ... 还有 114 篇
 
-## Interpretability (可解释性) - 114 篇
+## Interpretability (可解释性) - 115 篇
 > 模型可解释性与可视化
 
+- [SuperClip Pyramid for Video Temporal Grounding](http://arxiv.org/abs/2610.26925v1)
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - [The Explainability Illusion: Must ViTs Exhibit Patch-Decodin](http://arxiv.org/abs/2610.25289v1)
-- [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
-- ... 还有 109 篇
+- ... 还有 110 篇
 
 ## Reinforcement Learning (强化学习) - 98 篇
 > 强化学习相关
@@ -80,15 +80,15 @@
 - [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v4)
 - ... 还有 49 篇
 
-## Multimodal (多模态) - 53 篇
+## Multimodal (多模态) - 54 篇
 > 多模态学习
 
+- [SuperClip Pyramid for Video Temporal Grounding](http://arxiv.org/abs/2610.26925v1)
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
 - [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
 - [Grounding Video Reasoning in Physical Signals](http://arxiv.org/abs/2604.21873v1)
 - [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3)
-- [Visual-ERM: Reward Modeling for Visual Equivalence](http://arxiv.org/abs/2603.13224v2)
-- ... 还有 48 篇
+- ... 还有 49 篇
 
 ## Medical AI (医学 AI) - 18 篇
 > 医学影像与临床 AI

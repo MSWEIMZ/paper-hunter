@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 296
+- **Total Papers**: 297
 - **Core Papers**: 95
-- **Strongly Related**: 201
-- **Last Updated**: 2026-10-20 02:21:06
+- **Strongly Related**: 202
+- **Last Updated**: 2026-10-21 02:14:19
 
 ## 🔥 Latest Core Papers
 
@@ -37,7 +37,7 @@
 ## 📅 Browse by Year
 
 <details>
-<summary>📅 2026 (24 papers)</summary>
+<summary>📅 2026 (25 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -48,6 +48,7 @@
 | 📎 | [Malware Classification using Diluted Convolutional](http://arxiv.org/abs/2601.09933v1) | Android malware has become an increasingly critical threat to organiza | 3.7 |
 | 📎 | [EvoGround: Self-Evolving Video Agents for Video Te](http://arxiv.org/abs/2605.13803v1) | Video temporal grounding (VTG) takes an untrimmed video and a natural- | 3.6 |
 | 📎 | [Grounding with Confidence: Controllable Generative](http://arxiv.org/abs/2609.39883v4) | Video temporal grounding supports applications such as video search, c | 3.6 |
+| 📎 | [SuperClip Pyramid for Video Temporal Grounding](http://arxiv.org/abs/2610.26925v1) | With the rapid expansion of online video content, video temporal groun | 3.6 |
 | 📎 | [Measuring What Matters: Synthetic Benchmarks for C](http://arxiv.org/abs/2606.04326v1) | Concept bottleneck models predict outcomes from high-level concepts de | 3.3 |
 | 📎 | [Causal Physics Steering in Video World Models via ](http://arxiv.org/abs/2605.24322v1) | Video world models learn representations of physical dynamics, but con | 3.3 |
 | 📎 | [Compositional Context Fine-Tuning Vision-Language ](http://arxiv.org/abs/2607.10797v1) | Assembly action understanding is a key enabler for effective human-rob | 3.3 |
