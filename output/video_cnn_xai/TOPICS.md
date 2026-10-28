@@ -1,6 +1,6 @@
 # 📊 主题统计
 
-## Computer Vision (计算机视觉) - 228 篇
+## Computer Vision (计算机视觉) - 229 篇
 > 图像识别、目标检测、图像分割等
 
 - [NeuroPath: Brain-Inspired Dual-Pathway Graph Convolutional N](http://arxiv.org/abs/2608.17487v1)
@@ -8,9 +8,9 @@
 - [Video-Oasis: Rethinking Evaluation of Video Understanding](http://arxiv.org/abs/2603.29616v2)
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
-- ... 还有 223 篇
+- ... 还有 224 篇
 
-## Natural Language Processing (自然语言处理) - 135 篇
+## Natural Language Processing (自然语言处理) - 136 篇
 > 自然语言处理相关
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -18,9 +18,9 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Causal Physics Steering in Video World Models via Concept Ac](http://arxiv.org/abs/2605.24322v1)
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
-- ... 还有 130 篇
+- ... 还有 131 篇
 
-## Deep Learning (深度学习) - 130 篇
+## Deep Learning (深度学习) - 131 篇
 > 深度学习基础方法
 
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
@@ -28,9 +28,9 @@
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - [HuC-VideoMAE: Human-Centric Video Masked Autoencoding from s](http://arxiv.org/abs/2610.08433v1)
-- ... 还有 125 篇
+- ... 还有 126 篇
 
-## Survey & Benchmark (综述与基准) - 119 篇
+## Survey & Benchmark (综述与基准) - 120 篇
 > 综述论文与基准测试
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -38,7 +38,7 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [EvoGround: Self-Evolving Video Agents for Video Temporal Gro](http://arxiv.org/abs/2605.13803v1)
 - [Grounding with Confidence: Controllable Generative Video Tem](http://arxiv.org/abs/2609.39883v4)
-- ... 还有 114 篇
+- ... 还有 115 篇
 
 ## Interpretability (可解释性) - 115 篇
 > 模型可解释性与可视化
@@ -50,7 +50,7 @@
 - [The Explainability Illusion: Must ViTs Exhibit Patch-Decodin](http://arxiv.org/abs/2610.25289v1)
 - ... 还有 110 篇
 
-## Reinforcement Learning (强化学习) - 98 篇
+## Reinforcement Learning (强化学习) - 99 篇
 > 强化学习相关
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
@@ -58,7 +58,7 @@
 - [3D-RFT: Reinforcement Fine-Tuning for Video-based 3D Scene U](http://arxiv.org/abs/2603.04976v2)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
 - [EvoGround: Self-Evolving Video Agents for Video Temporal Gro](http://arxiv.org/abs/2605.13803v1)
-- ... 还有 93 篇
+- ... 还有 94 篇
 
 ## Optimization (优化) - 68 篇
 > 模型优化、压缩、加速
@@ -70,25 +70,25 @@
 - [Applied Explainability for Large Language Models: A Comparat](http://arxiv.org/abs/2604.15371v1)
 - ... 还有 63 篇
 
-## Generative Models (生成模型) - 54 篇
+## Generative Models (生成模型) - 55 篇
 > 生成对抗网络、变分自编码器、扩散模型等
 
 - [Video Understanding: From Geometry and Semantics to Unified ](http://arxiv.org/abs/2603.17840v1)
 - [Malware Classification using Diluted Convolutional Neural Ne](http://arxiv.org/abs/2601.09933v1)
 - [Grounding with Confidence: Controllable Generative Video Tem](http://arxiv.org/abs/2609.39883v4)
 - [Interior interpretability with attention rollout: contractio](http://arxiv.org/abs/2607.22367v1)
-- [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v4)
-- ... 还有 49 篇
+- [Video Prediction Policy 2: Predict Better, Act Better](http://arxiv.org/abs/2610.10270v4)
+- ... 还有 50 篇
 
-## Multimodal (多模态) - 54 篇
+## Multimodal (多模态) - 55 篇
 > 多模态学习
 
 - [SuperClip Pyramid for Video Temporal Grounding](http://arxiv.org/abs/2610.26925v1)
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
+- [Video Prediction Policy 2: Predict Better, Act Better](http://arxiv.org/abs/2610.10270v4)
 - [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1)
 - [Grounding Video Reasoning in Physical Signals](http://arxiv.org/abs/2604.21873v1)
-- [A Very Big Video Reasoning Suite](http://arxiv.org/abs/2602.20159v3)
-- ... 还有 49 篇
+- ... 还有 50 篇
 
 ## Medical AI (医学 AI) - 18 篇
 > 医学影像与临床 AI
@@ -100,12 +100,12 @@
 - [Hybrid deep learning-based strategy for the hepatocellular c](http://arxiv.org/abs/2412.03084v2)
 - ... 还有 13 篇
 
-## Robotics (机器人学) - 12 篇
+## Robotics (机器人学) - 13 篇
 > 机器人学习与控制
 
 - [Compositional Context Fine-Tuning Vision-Language Model for ](http://arxiv.org/abs/2607.10797v1)
+- [Video Prediction Policy 2: Predict Better, Act Better](http://arxiv.org/abs/2610.10270v4)
 - [GEM-4D: Geometry-Enhanced Video World Models for Robot Manip](http://arxiv.org/abs/2605.22882v4)
 - [Unified Video Action Model](http://arxiv.org/abs/2503.00200v3)
 - [3DAffordSplat: Efficient Affordance Reasoning with 3D Gaussi](http://arxiv.org/abs/2504.11218v2)
-- [LogicVista: Multimodal LLM Logical Reasoning Benchmark in Vi](http://arxiv.org/abs/2407.04973v1)
-- ... 还有 7 篇
+- ... 还有 8 篇

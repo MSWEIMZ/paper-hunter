@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 297
-- **Core Papers**: 95
+- **Total Papers**: 298
+- **Core Papers**: 96
 - **Strongly Related**: 202
-- **Last Updated**: 2026-10-27 02:42:13
+- **Last Updated**: 2026-10-28 02:46:54
 
 ## 🔥 Latest Core Papers
 
@@ -37,7 +37,7 @@
 ## 📅 Browse by Year
 
 <details>
-<summary>📅 2026 (25 papers)</summary>
+<summary>📅 2026 (26 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -56,6 +56,7 @@
 | 📎 | [Applied Explainability for Large Language Models: ](http://arxiv.org/abs/2604.15371v1) | Large language models (LLMs) achieve strong performance across many na | 3.1 |
 | 📎 | [HuC-VideoMAE: Human-Centric Video Masked Autoencod](http://arxiv.org/abs/2610.08433v1) | Modern action recognition models rely on video transformers pretrained | 3.1 |
 | 📎 | [The Explainability Illusion: Must ViTs Exhibit Pat](http://arxiv.org/abs/2610.25289v1) | Transformers are widely assumed to exhibit token-decoding explainabili | 3.1 |
+| 📎 | [Video Prediction Policy 2: Predict Better, Act Bet](http://arxiv.org/abs/2610.10270v4) | World action models (WAMs) have emerged as an important class of gener | 3.1 |
 | 📎 | [Multimodal Concept Bottleneck Models](http://arxiv.org/abs/2606.19882v1) | Concept Bottleneck Models (CBMs) enhance the interpretability of deep  | 3.0 |
 | 📎 | [GEM-4D: Geometry-Enhanced Video World Models for R](http://arxiv.org/abs/2605.22882v4) | Video world models can generate realistic futures from a single instru | 2.8 |
 | 📎 | [Instruction-Based Video Editing by Repurposing an ](http://arxiv.org/abs/2608.14790v3) | Instruction-based video editing is commonly built on video-pretrained  | 2.8 |
@@ -422,8 +423,8 @@
 |------|------|------|------|
 | 🔥 | [A new network-based algorithm for human activity r](http://arxiv.org/abs/1502.06075v1) | In this paper, a new network-transmission-based (NTB) algorithm is pro | 4.5 |
 | 🔥 | [Towards Dropout Training for Convolutional Neural ](http://arxiv.org/abs/1512.00242v1) | Recently, dropout has seen increasing use in deep learning. For deep c | 4.2 |
+| 🔥 | [Activity Recognition Using A Combination of Catego](http://arxiv.org/abs/1503.00081v1) | This paper presents a novel approach for automatic recognition of huma | 4.1 |
 | 📎 | [Intra-and-Inter-Constraint-based Video Enhancement](http://arxiv.org/abs/1502.06080v1) | Video enhancement plays an important role in various video application | 3.97 |
-| 📎 | [Activity Recognition Using A Combination of Catego](http://arxiv.org/abs/1503.00081v1) | This paper presents a novel approach for automatic recognition of huma | 3.8 |
 | 📎 | [End-to-end Convolutional Network for Saliency Pred](http://arxiv.org/abs/1507.01422v1) | The prediction of saliency areas in images has been traditionally addr | 3.8 |
 | 📎 | [Generalizing Pooling Functions in Convolutional Ne](http://arxiv.org/abs/1509.08985v2) | We seek to improve deep neural networks by generalizing the pooling op | 3.7 |
 

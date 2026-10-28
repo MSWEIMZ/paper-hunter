@@ -1,6 +1,6 @@
 # 📈 论文趋势报告
 
-> 生成时间: 2026-10-27 02:42:13
+> 生成时间: 2026-10-28 02:46:54
 
 ## 📅 年度统计
 
@@ -17,7 +17,7 @@
 | 2023 | 26 | 📉 -13% |
 | 2024 | 42 | 📈 +62% |
 | 2025 | 44 | ➡️ 持平 |
-| 2026 | 25 | 📉 -43% |
+| 2026 | 26 | 📉 -41% |
 
 ## 📊 季度趋势（最近 8 个季度）
 
@@ -30,19 +30,19 @@
 | 2026 Q1 | 6 |
 | 2026 Q2 | 8 |
 | 2026 Q3 | 7 |
-| 2026 Q4 | 4 |
+| 2026 Q4 | 5 |
 
 ## 🔥 热门主题 Top 10
 
 | 主题 | 论文数 |
 |------|--------|
-| computer_vision | 228 |
-| nlp | 135 |
-| deep_learning | 130 |
-| survey_benchmark | 119 |
+| computer_vision | 229 |
+| nlp | 136 |
+| deep_learning | 131 |
+| survey_benchmark | 120 |
 | interpretability | 115 |
-| reinforcement_learning | 98 |
+| reinforcement_learning | 99 |
 | optimization | 68 |
-| generative_models | 54 |
-| multimodal | 54 |
+| generative_models | 55 |
+| multimodal | 55 |
 | medical_ai | 18 |
