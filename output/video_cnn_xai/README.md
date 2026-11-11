@@ -5,9 +5,9 @@
 ## 📊 Overview
 
 - **Total Papers**: 298
-- **Core Papers**: 96
-- **Strongly Related**: 202
-- **Last Updated**: 2026-11-10 04:57:02
+- **Core Papers**: 95
+- **Strongly Related**: 203
+- **Last Updated**: 2026-11-11 03:25:59
 
 ## 🔥 Latest Core Papers
 
@@ -423,8 +423,8 @@
 |------|------|------|------|
 | 🔥 | [A new network-based algorithm for human activity r](http://arxiv.org/abs/1502.06075v1) | In this paper, a new network-transmission-based (NTB) algorithm is pro | 4.5 |
 | 🔥 | [Towards Dropout Training for Convolutional Neural ](http://arxiv.org/abs/1512.00242v1) | Recently, dropout has seen increasing use in deep learning. For deep c | 4.2 |
-| 🔥 | [Activity Recognition Using A Combination of Catego](http://arxiv.org/abs/1503.00081v1) | This paper presents a novel approach for automatic recognition of huma | 4.1 |
 | 📎 | [Intra-and-Inter-Constraint-based Video Enhancement](http://arxiv.org/abs/1502.06080v1) | Video enhancement plays an important role in various video application | 3.97 |
+| 📎 | [Activity Recognition Using A Combination of Catego](http://arxiv.org/abs/1503.00081v1) | This paper presents a novel approach for automatic recognition of huma | 3.8 |
 | 📎 | [End-to-end Convolutional Network for Saliency Pred](http://arxiv.org/abs/1507.01422v1) | The prediction of saliency areas in images has been traditionally addr | 3.8 |
 | 📎 | [Generalizing Pooling Functions in Convolutional Ne](http://arxiv.org/abs/1509.08985v2) | We seek to improve deep neural networks by generalizing the pooling op | 3.7 |
 
