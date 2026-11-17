@@ -4,10 +4,10 @@
 
 ## 📊 Overview
 
-- **Total Papers**: 298
+- **Total Papers**: 299
 - **Core Papers**: 95
-- **Strongly Related**: 203
-- **Last Updated**: 2026-11-16 03:26:57
+- **Strongly Related**: 204
+- **Last Updated**: 2026-11-17 05:27:54
 
 ## 🔥 Latest Core Papers
 
@@ -71,7 +71,7 @@
 </details>
 
 <details>
-<summary>📅 2025 (44 papers)</summary>
+<summary>📅 2025 (45 papers)</summary>
 
 | Tag | Title | Summary | Score |
 |------|------|------|------|
@@ -113,6 +113,7 @@
 | 📎 | [Scalable Event-Based Video Streaming for Machines ](http://arxiv.org/abs/2508.15003v1) | Lossy compression and rate-adaptive streaming are a mainstay in tradit | 2.97 |
 | 📎 | [Reasoning Riddles: How Explainability Reveals Cogn](http://arxiv.org/abs/2510.02780v1) | Vision-Language Models (VLMs) excel at many multimodal tasks, yet thei | 2.8 |
 | 📎 | [Region-Aware Multimodal Large Language Model via S](http://arxiv.org/abs/2506.23102v3) | Current CT report generation frameworks predominantly rely on global f | 2.8 |
+| 📎 | [Evaluating the Generalizability and Explainability](http://arxiv.org/abs/2504.16150v2) | In this paper we evaluate the performance of topological features for  | 2.8 |
 | 📎 | [Progressive Growing of Video Tokenizers for Tempor](http://arxiv.org/abs/2501.05442v2) | Video tokenizers are essential for latent video diffusion models, conv | 2.77 |
 | 📎 | [Navigating the State of Cognitive Flow: Context-Aw](http://arxiv.org/abs/2504.16021v1) | Flow theory describes an optimal cognitive state where individuals exp | 2.7 |
 | 📎 | [Attention Debiasing for Token Pruning in Vision La](http://arxiv.org/abs/2508.17807v2) | Vision-language models (VLMs) typically encode substantially more visu | 2.67 |
