@@ -7,7 +7,7 @@
 - **Total Papers**: 299
 - **Core Papers**: 95
 - **Strongly Related**: 204
-- **Last Updated**: 2026-11-18 04:54:06
+- **Last Updated**: 2026-11-19 04:45:19
 
 ## 🔥 Latest Core Papers
 
@@ -49,7 +49,7 @@
 | 📎 | [EvoGround: Self-Evolving Video Agents for Video Te](http://arxiv.org/abs/2605.13803v1) | Video temporal grounding (VTG) takes an untrimmed video and a natural- | 3.6 |
 | 📎 | [Grounding with Confidence: Controllable Generative](http://arxiv.org/abs/2609.39883v4) | Video temporal grounding supports applications such as video search, c | 3.6 |
 | 📎 | [SuperClip Pyramid for Video Temporal Grounding](http://arxiv.org/abs/2610.26925v1) | With the rapid expansion of online video content, video temporal groun | 3.6 |
-| 📎 | [Measuring What Matters: Synthetic Benchmarks for C](http://arxiv.org/abs/2606.04326v1) | Concept bottleneck models predict outcomes from high-level concepts de | 3.3 |
+| 📎 | [Measuring What Matters: Synthetic Benchmarks for C](http://arxiv.org/abs/2606.04326v2) | Concept bottleneck models predict using high-level concepts detected i | 3.3 |
 | 📎 | [Causal Physics Steering in Video World Models via ](http://arxiv.org/abs/2605.24322v1) | Video world models learn representations of physical dynamics, but con | 3.3 |
 | 📎 | [Compositional Context Fine-Tuning Vision-Language ](http://arxiv.org/abs/2607.10797v1) | Assembly action understanding is a key enabler for effective human-rob | 3.3 |
 | 📎 | [Interior interpretability with attention rollout: ](http://arxiv.org/abs/2607.22367v1) | Feature-attribution methods assign scores relating input variables to  | 3.3 |

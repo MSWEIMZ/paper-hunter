@@ -1,6 +1,6 @@
 # 📈 论文趋势报告
 
-> 生成时间: 2026-11-18 04:54:06
+> 生成时间: 2026-11-19 04:45:19
 
 ## 📅 年度统计
 
@@ -41,7 +41,7 @@
 | deep_learning | 132 |
 | survey_benchmark | 120 |
 | interpretability | 116 |
-| reinforcement_learning | 99 |
+| reinforcement_learning | 100 |
 | optimization | 68 |
 | generative_models | 55 |
 | multimodal | 55 |
