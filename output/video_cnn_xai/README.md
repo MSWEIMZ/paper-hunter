@@ -7,7 +7,7 @@
 - **Total Papers**: 299
 - **Core Papers**: 95
 - **Strongly Related**: 204
-- **Last Updated**: 2026-11-24 07:17:33
+- **Last Updated**: 2026-11-25 05:51:20
 
 ## 🔥 Latest Core Papers
 
@@ -30,7 +30,7 @@
 | 2025 | [CoS: Chain-of-Shot Prompting for Long Video Understanding](http://arxiv.org/abs/2502.06428v2) | Multi-modal Large Language Models (MLLMs) struggle with long videos due to the n | Jian Hu, Zixu Cheng+ | 4.3 |
 | 2025 | [TinyLLaVA-Video: Towards Smaller LMMs for Video Understandin](http://arxiv.org/abs/2501.15513v2) | Video behavior recognition and scene understanding are fundamental tasks in mult | Xingjian Zhang, Xi Weng+ | 4.3 |
 | 2025 | [Unified Video Action Model](http://arxiv.org/abs/2503.00200v3) | A unified video and action model holds significant promise for robotics, where v | Shuang Li, Yihuai Gao+ | 4.1 |
-| 2025 | [Concepts in Motion: Temporal Concept Bottleneck Model for In](http://arxiv.org/abs/2509.20899v3) | Concept Bottleneck Models (CBMs) enable interpretable image classification by st | Patrick Knab, Sascha Marton+ | 4.1 |
+| 2025 | [Concepts in Motion: Temporal Concept Bottleneck Model for In](http://arxiv.org/abs/2509.20899v4) | Concept Bottleneck Models (CBMs) enable interpretable image classification by st | Patrick Knab, Sascha Marton+ | 4.1 |
 | 2025 | [Image-to-Video Transfer Learning based on Image-Language Fou](http://arxiv.org/abs/2510.10671v3) | Image-Language Foundation Models (ILFMs) have demonstrated remarkable success in | Jinxuan Li, Chaolei Tan+ | 4.1 |
 | 2024 | [Can VLMs be used on videos for action recognition? LLMs are ](http://arxiv.org/abs/2407.14834v1) | Recent advancements have introduced multiple vision-language models (VLMs) demon | Harsh Lunia | 4.8 |
 
@@ -89,7 +89,7 @@
 | 🔥 | [CoS: Chain-of-Shot Prompting for Long Video Unders](http://arxiv.org/abs/2502.06428v2) | Multi-modal Large Language Models (MLLMs) struggle with long videos du | 4.3 |
 | 🔥 | [TinyLLaVA-Video: Towards Smaller LMMs for Video Un](http://arxiv.org/abs/2501.15513v2) | Video behavior recognition and scene understanding are fundamental tas | 4.3 |
 | 🔥 | [Unified Video Action Model](http://arxiv.org/abs/2503.00200v3) | A unified video and action model holds significant promise for robotic | 4.1 |
-| 🔥 | [Concepts in Motion: Temporal Concept Bottleneck Mo](http://arxiv.org/abs/2509.20899v3) | Concept Bottleneck Models (CBMs) enable interpretable image classifica | 4.1 |
+| 🔥 | [Concepts in Motion: Temporal Concept Bottleneck Mo](http://arxiv.org/abs/2509.20899v4) | Concept Bottleneck Models (CBMs) enable interpretable image classifica | 4.1 |
 | 🔥 | [Image-to-Video Transfer Learning based on Image-La](http://arxiv.org/abs/2510.10671v3) | Image-Language Foundation Models (ILFMs) have demonstrated remarkable  | 4.1 |
 | 📎 | [How Much 3D Do Video Foundation Models Encode?](http://arxiv.org/abs/2512.19949v1) | Videos are continuous 2D projections of 3D worlds. After training on l | 3.97 |
 | 📎 | [Prisma: An Open Source Toolkit for Mechanistic Int](http://arxiv.org/abs/2504.19475v3) | Robust tooling and publicly available pre-trained models have helped d | 3.93 |
